@@ -20,7 +20,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter{
 
     private final ConcurrentMap<Channel, Channel> ref = new ConcurrentHashMap<Channel, Channel>();
 
-    protected ServerHandler() {
+    public ServerHandler() {
     	
     }
 

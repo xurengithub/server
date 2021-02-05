@@ -1,6 +1,7 @@
 package com.mgame.net;
 
 import io.netty.bootstrap.ServerBootstrap;
+import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
@@ -10,6 +11,8 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 import java.net.InetSocketAddress;
 
+import io.netty.util.concurrent.Future;
+import io.netty.util.concurrent.GenericFutureListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,7 +33,7 @@ public class NettyTcpServer{
 	    bootstrap = new ServerBootstrap();
 	    bootstrap.group(bossGroup, workerGroup)
 			    .channel(NioServerSocketChannel.class)
-			    .option(ChannelOption.SO_BACKLOG, 5)
+			    .option(ChannelOption.SO_BACKLOG, 100)
 			    .childOption(ChannelOption.TCP_NODELAY, true);
     }
 
@@ -39,16 +42,23 @@ public class NettyTcpServer{
             @Override
             protected void initChannel(SocketChannel ch) throws Exception {
                 ch.pipeline().addLast("decoder", new ProtoDecoder(upLimit))
-                        .addLast("server-handler", new ServerHandler()) 
+                        .addLast("server-handler", new ServerHandler())
                         .addLast("encoder", new ProtoEncoder(downLimit));
             }
         });
         InetSocketAddress address = new InetSocketAddress(ip, port);
         try {
-            bootstrap.bind(address).sync();
+            ChannelFuture future = bootstrap.bind(address).sync();
+            log.info("Netty Tcp Server started..");
+
+            future.channel().closeFuture().sync();
+            log.info("Netty Tcp Server closed..");
         } catch (InterruptedException e) {
             log.error("bind "+ip+":"+port+" failed", e);
             shutdown();
+        } finally {
+            bossGroup.shutdownGracefully();
+            workerGroup.shutdownGracefully();
         }
     }
 
