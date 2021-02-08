@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mgame.dao.mapper.UserMapper">
+    <resultMap id ="PlayerMap" type="com.mgame.dao.entity.PlayerEntity">
+        <result column="player_id" property="playerId"/>
+        <result column="player_name" property="playerName"/>
+        <result column="coin" property="coin"/>
+        <result column="gem" property="gem"/>
+        <result column="user_id" property="userId"/>
+        <result column="exp" property="exp"/>
+        <result column="level" property="level"/>
+        <result column="scene" property="scene"/>
+        <result column="area_id" property="areaId"/>
+        <result column="x" property="x"/>
+        <result column="y" property="y"/>
+        <result column="z" property="z"/>
+        <result column="ex" property="ex"/>
+        <result column="ey" property="ey"/>
+        <result column="ez" property="ez"/>
+        <result column="hp" property="hp"/>
+        <result column="mp" property="mp"/>
+        <result column="max_hp" property="maxHp"/>
+        <result column="max_mp" property="maxMp"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="com.mgame.dao.entity.PlayerEntity">
+        insert into player_info(player_name,coin,gem,user_id,exp,level,scene,area_id,x,y,z,ex,ey,ez,hp,mp,max_hp,max_mp)
+        values(#{playerName},#{coin},#{gem},#{userId},#{exp},#{level},#{scene},#{areaId},#{x},#{y},#{z},#{ex},#{ey},#{ez},#{hp},#{mp},#{maxHp},#{maxMp})
+    </insert>
+
+    <update id="update" parameterType="com.mgame.dao.entity.PlayerEntity">
+        update player_info
+        <trim prefix="set" suffixOverrides=",">
+<!--            <if test="playerId != null"> player_id = #{playerId},</if>-->
+            <if test="playerName != null"> player_name = #{playerName },</if>
+            <if test="coin != null"> coin = #{coin},</if>
+            <if test="gem != null"> gem = #{gem},</if>
+            <if test="userId != null"> user_id = #{userId},</if>
+            <if test="exp != null"> exp = #{exp},</if>
+            <if test="level != null"> level = #{level},</if>
+            <if test="scene != null"> scene = #{scene},</if>
+            <if test="areaId != null"> area_id = #{areaId},</if>
+            <if test="x != null"> x = #{x},</if>
+            <if test="y != null"> y = #{y},</if>
+            <if test="z != null"> z = #{z},</if>
+            <if test="ex != null"> ex = #{ex},</if>
+            <if test="ey != null"> ey = #{ey},</if>
+            <if test="ez != null"> ez = #{ez},</if>
+            <if test="hp != null"> hp = #{hp},</if>
+            <if test="mp != null"> mp = #{mp},</if>
+            <if test="maxHp != null"> max_hp = #{maxHp},</if>
+            <if test="maxMp != null"> max_mp = #{maxMp},</if>
+        </trim>
+        where player_id=#{playerId}
+    </update>
+
+    <select id="findById" parameterType="java.lang.Long" resultType="com.mgame.dao.entity.PlayerEntity">
+        select * from player_info
+        where player_id=#{playerId}
+    </select>
+
+    <select id="findByName" parameterType="java.lang.String" resultType="com.mgame.dao.entity.PlayerEntity">
+        select * from player_info
+        where player_name=#{playerName}
+    </select>
+    <select id="findPlayersInfoByUserId" parameterType="java.lang.String" resultMap="PlayerMap">
+        select * from player_info
+        where user_name=#{userName}
+    </select>
+</mapper>

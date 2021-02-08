@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mgame.dao.mapper.UserMapper">
+    <resultMap id ="UserInfoMap" type="com.mgame.dao.entity.UserInfoEntity">
+        <result column="id" property="id"/>
+        <result column="nick_name" property="nickName"/>
+        <result column="account" property="account"/>
+        <result column="password" property="password"/>
+        <result column="insert_dt" property="insertDt"/>
+        <result column="upd_dt" property="updDt"/>
+    </resultMap>
+
+    <insert id="saveOne" parameterType="com.mgame.dao.entity.UserInfoEntity">
+        insert into user_info(id,nick_name,account,password) values(#{id},#{nickName},#{account},#{password})
+    </insert>
+
+    <select id = "queryAllUsers" resultMap="UserInfoMap">
+        select
+        *
+        from
+        user_info
+    </select>
+
+    <update id="updateOne" parameterType="com.mgame.dao.entity.UserInfoEntity">
+        update user_info
+        <trim prefix="set" suffixOverrides=",">
+            <if test="nickName != null"> nick_name = #{nickName },</if>
+            <if test="password != null"> password = #{password},</if>
+        </trim>
+        where id=#{id}
+    </update>
+
+    <select id="queryUserByAccount" resultType="com.mgame.dao.entity.UserInfoEntity">
+        select *
+        from user_info
+        where account=#{account} limit 1
+    </select>
+</mapper>
