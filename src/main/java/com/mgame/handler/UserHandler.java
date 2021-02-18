@@ -41,7 +41,7 @@ public class UserHandler implements AbstractHandler {
 
     private void login(Channel channel, RoleProto.LoginReq_1001001 res) {
         boolean isSucc = userService.verifyAccountAndPassword(res.getAccount(), res.getPassword());
-        
+
     }
 
     private void register(Channel channel, RoleProto.RegisterReq_1001002 res) {
