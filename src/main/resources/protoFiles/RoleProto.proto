@@ -46,6 +46,9 @@ message RegisterReq_1001002{
 	required string account = 1;//账号
     required string password = 2;//密码
 }
+message RegisterResp_1001002{
+    required int32 code = 1;
+}
 
 
 // 创建角色

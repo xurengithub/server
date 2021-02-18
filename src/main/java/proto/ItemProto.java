@@ -10,6 +10,24 @@ public final class ItemProto {
   }
   public interface BuyReq_1001000OrBuilder
       extends com.google.protobuf.MessageOrBuilder {
+
+    // required int32 cfg_id = 1;
+    /**
+     * <code>required int32 cfg_id = 1;</code>
+     *
+     * <pre>
+     *物品配置id
+     * </pre>
+     */
+    boolean hasCfgId();
+    /**
+     * <code>required int32 cfg_id = 1;</code>
+     *
+     * <pre>
+     *物品配置id
+     * </pre>
+     */
+    int getCfgId();
   }
   /**
    * Protobuf type {@code protoFiles.BuyReq_1001000}
@@ -48,6 +66,7 @@ public final class ItemProto {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       initFields();
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -63,6 +82,11 @@ public final class ItemProto {
                                      extensionRegistry, tag)) {
                 done = true;
               }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              cfgId_ = input.readInt32();
               break;
             }
           }
@@ -104,13 +128,43 @@ public final class ItemProto {
       return PARSER;
     }
 
+    private int bitField0_;
+    // required int32 cfg_id = 1;
+    public static final int CFG_ID_FIELD_NUMBER = 1;
+    private int cfgId_;
+    /**
+     * <code>required int32 cfg_id = 1;</code>
+     *
+     * <pre>
+     *物品配置id
+     * </pre>
+     */
+    public boolean hasCfgId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 cfg_id = 1;</code>
+     *
+     * <pre>
+     *物品配置id
+     * </pre>
+     */
+    public int getCfgId() {
+      return cfgId_;
+    }
+
     private void initFields() {
+      cfgId_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
 
+      if (!hasCfgId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -118,6 +172,9 @@ public final class ItemProto {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, cfgId_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -127,6 +184,10 @@ public final class ItemProto {
       if (size != -1) return size;
 
       size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, cfgId_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
       return size;
@@ -247,6 +308,8 @@ public final class ItemProto {
 
       public Builder clear() {
         super.clear();
+        cfgId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -273,6 +336,13 @@ public final class ItemProto {
 
       public proto.ItemProto.BuyReq_1001000 buildPartial() {
         proto.ItemProto.BuyReq_1001000 result = new proto.ItemProto.BuyReq_1001000(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.cfgId_ = cfgId_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -288,11 +358,18 @@ public final class ItemProto {
 
       public Builder mergeFrom(proto.ItemProto.BuyReq_1001000 other) {
         if (other == proto.ItemProto.BuyReq_1001000.getDefaultInstance()) return this;
+        if (other.hasCfgId()) {
+          setCfgId(other.getCfgId());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
+        if (!hasCfgId()) {
+          
+          return false;
+        }
         return true;
       }
 
@@ -313,6 +390,56 @@ public final class ItemProto {
         }
         return this;
       }
+      private int bitField0_;
+
+      // required int32 cfg_id = 1;
+      private int cfgId_ ;
+      /**
+       * <code>required int32 cfg_id = 1;</code>
+       *
+       * <pre>
+       *物品配置id
+       * </pre>
+       */
+      public boolean hasCfgId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 cfg_id = 1;</code>
+       *
+       * <pre>
+       *物品配置id
+       * </pre>
+       */
+      public int getCfgId() {
+        return cfgId_;
+      }
+      /**
+       * <code>required int32 cfg_id = 1;</code>
+       *
+       * <pre>
+       *物品配置id
+       * </pre>
+       */
+      public Builder setCfgId(int value) {
+        bitField0_ |= 0x00000001;
+        cfgId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 cfg_id = 1;</code>
+       *
+       * <pre>
+       *物品配置id
+       * </pre>
+       */
+      public Builder clearCfgId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        cfgId_ = 0;
+        onChanged();
+        return this;
+      }
 
       // @@protoc_insertion_point(builder_scope:protoFiles.BuyReq_1001000)
     }
@@ -327,6 +454,24 @@ public final class ItemProto {
 
   public interface BuyResp_1001000OrBuilder
       extends com.google.protobuf.MessageOrBuilder {
+
+    // required int32 code = 1;
+    /**
+     * <code>required int32 code = 1;</code>
+     *
+     * <pre>
+     *code
+     * </pre>
+     */
+    boolean hasCode();
+    /**
+     * <code>required int32 code = 1;</code>
+     *
+     * <pre>
+     *code
+     * </pre>
+     */
+    int getCode();
   }
   /**
    * Protobuf type {@code protoFiles.BuyResp_1001000}
@@ -361,6 +506,7 @@ public final class ItemProto {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       initFields();
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -376,6 +522,11 @@ public final class ItemProto {
                                      extensionRegistry, tag)) {
                 done = true;
               }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              code_ = input.readInt32();
               break;
             }
           }
@@ -417,13 +568,43 @@ public final class ItemProto {
       return PARSER;
     }
 
+    private int bitField0_;
+    // required int32 code = 1;
+    public static final int CODE_FIELD_NUMBER = 1;
+    private int code_;
+    /**
+     * <code>required int32 code = 1;</code>
+     *
+     * <pre>
+     *code
+     * </pre>
+     */
+    public boolean hasCode() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 code = 1;</code>
+     *
+     * <pre>
+     *code
+     * </pre>
+     */
+    public int getCode() {
+      return code_;
+    }
+
     private void initFields() {
+      code_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
 
+      if (!hasCode()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -431,6 +612,9 @@ public final class ItemProto {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, code_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -440,6 +624,10 @@ public final class ItemProto {
       if (size != -1) return size;
 
       size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, code_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
       return size;
@@ -556,6 +744,8 @@ public final class ItemProto {
 
       public Builder clear() {
         super.clear();
+        code_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -582,6 +772,13 @@ public final class ItemProto {
 
       public proto.ItemProto.BuyResp_1001000 buildPartial() {
         proto.ItemProto.BuyResp_1001000 result = new proto.ItemProto.BuyResp_1001000(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.code_ = code_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -597,11 +794,18 @@ public final class ItemProto {
 
       public Builder mergeFrom(proto.ItemProto.BuyResp_1001000 other) {
         if (other == proto.ItemProto.BuyResp_1001000.getDefaultInstance()) return this;
+        if (other.hasCode()) {
+          setCode(other.getCode());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
+        if (!hasCode()) {
+          
+          return false;
+        }
         return true;
       }
 
@@ -620,6 +824,56 @@ public final class ItemProto {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+      private int bitField0_;
+
+      // required int32 code = 1;
+      private int code_ ;
+      /**
+       * <code>required int32 code = 1;</code>
+       *
+       * <pre>
+       *code
+       * </pre>
+       */
+      public boolean hasCode() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 code = 1;</code>
+       *
+       * <pre>
+       *code
+       * </pre>
+       */
+      public int getCode() {
+        return code_;
+      }
+      /**
+       * <code>required int32 code = 1;</code>
+       *
+       * <pre>
+       *code
+       * </pre>
+       */
+      public Builder setCode(int value) {
+        bitField0_ |= 0x00000001;
+        code_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 code = 1;</code>
+       *
+       * <pre>
+       *code
+       * </pre>
+       */
+      public Builder clearCode() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        code_ = 0;
+        onChanged();
         return this;
       }
 
@@ -653,9 +907,9 @@ public final class ItemProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017ItemProto.proto\022\nprotoFiles\"\020\n\016BuyReq_" +
-      "1001000\"\021\n\017BuyResp_1001000B\022\n\005protoB\tIte" +
-      "mProto"
+      "\n\017ItemProto.proto\022\nprotoFiles\" \n\016BuyReq_" +
+      "1001000\022\016\n\006cfg_id\030\001 \002(\005\"\037\n\017BuyResp_10010" +
+      "00\022\014\n\004code\030\001 \002(\005B\022\n\005protoB\tItemProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -667,13 +921,13 @@ public final class ItemProto {
           internal_static_protoFiles_BuyReq_1001000_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_protoFiles_BuyReq_1001000_descriptor,
-              new java.lang.String[] { });
+              new java.lang.String[] { "CfgId", });
           internal_static_protoFiles_BuyResp_1001000_descriptor =
             getDescriptor().getMessageTypes().get(1);
           internal_static_protoFiles_BuyResp_1001000_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_protoFiles_BuyResp_1001000_descriptor,
-              new java.lang.String[] { });
+              new java.lang.String[] { "Code", });
           return null;
         }
       };
