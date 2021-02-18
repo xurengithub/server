@@ -1,0 +1,13 @@
+package protoFiles;
+
+option java_package = "proto";
+option java_outer_classname = "ItemProto";
+
+// 买
+message BuyReq_1001000{
+    required int32 cfg_id = 1;//物品配置id
+}
+message BuyResp_1001000{
+    required int32 code = 1;//code
+}
+

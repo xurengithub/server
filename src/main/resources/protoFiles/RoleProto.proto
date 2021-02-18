@@ -10,9 +10,8 @@ message LoginReq_1001001{
 }
 message LoginResp_1001001{
 	required string account = 1;//账号
-	optional int64 rid = 2;//玩家id
-	optional int32 level = 3;//等级
-	repeated Item items = 4;//拥有物品
+	optional string rid = 2;//账号id
+	repeated Role roles = 3;//角色列表
 }
 
 message Item{
@@ -21,22 +20,50 @@ message Item{
 	required int32 num = 3;
 }
 
-//请求退出
-message LogoutReq_1001002{
-	required int64 rid = 2;//玩家id
-}
-message LogoutResp_1001002{
-	required int64 rid = 2;//玩家id
+message Role{
+    required int32 id = 1;//id
+    required string name = 2;//名称
+    optional int32 coin = 3;//金币数
+    optional int32 gem = 4;//钻石
+    optional int32 exp = 5;//经验
+    optional string scene = 6;//场景名称
+    optional int32 area_id = 7;//区域id
+    optional float x = 8;
+    optional float y = 9;
+    optional float z = 10;
+    optional float ex = 11;
+    optional float ey = 12;
+    optional float ez = 13;
+    optional int32 hp = 14;
+    optional int32 mp = 15;
+    optional int32 max_hp = 16;
+    optional int32 max_mp = 17;
+
 }
 
-//测试List
-message ListTestReq_1001003{
-	repeated int32 id = 1;
-	repeated int64 num = 2;
-	repeated string players = 3;
+//注册
+message RegisterReq_1001002{
+	required string account = 1;//账号
+    required string password = 2;//密码
 }
-message ListTestResp_1001003{
-	repeated int32 id = 1;
-	repeated int64 num = 2;
-	repeated string players = 3;
+
+
+// 创建角色
+message CreateRoleReq_1001003{
+    required string name = 1;//名称
+}
+
+// 进入游戏
+message EnterGameReq_1001004{
+    required int32 role_id = 1;//角色id
+}
+message EnterGameResp_1001004{
+    required Role role = 1;//角色信息
+    repeated Item items = 2;//拥有物品
+}
+
+//离线
+message OutGameReq_1001005{
+}
+message OutGameResp_1001005{
 }

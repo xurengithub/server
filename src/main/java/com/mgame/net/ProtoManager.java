@@ -38,15 +38,15 @@ public class ProtoManager {
         try {
             reqMap = ClassUtils.getClasses(packageName, clazz, "Req_");
             respMap = ClassUtils.getClasses(packageName, clazz, "Resp_");
+            messageType.put(1001000, UserHandler.class);//心跳
             messageType.put(1001001, UserHandler.class);//登陆
             messageType.put(1001002, UserHandler.class);//注册
             messageType.put(1001003, UserHandler.class);//创建角色
-            messageType.put(1001004, UserHandler.class);//心跳
-            messageType.put(1001005, SynHandler.class);//同步
-            messageType.put(1001006, SynHandler.class);//攻击
-            messageType.put(1001007, PlayerHandler.class);//进入游戏
+            messageType.put(1001004, PlayerHandler.class);//进入游戏
+            messageType.put(1001005, PlayerHandler.class);//离线
+            messageType.put(1001006, SynHandler.class);//同步
+            messageType.put(1001007, SynHandler.class);//攻击
             messageType.put(1001008, PlayerHandler.class);//买物品
-            messageType.put(1001009, PlayerHandler.class);//离线
         } catch (Throwable e) {
             e.printStackTrace();
         }
