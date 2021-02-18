@@ -64,7 +64,7 @@ public class ReflectionUtil {
         List<Class<?>> subList = Arrays.asList(targetClass.getInterfaces());
         if (subList.size() > 0)
             interfaceSet.addAll(subList);
-        Class superClass = targetClass.getSuperclass();
+        Class<?> superClass = targetClass.getSuperclass();
         while (null != superClass) {
             subList = Arrays.asList(superClass.getInterfaces());
 
