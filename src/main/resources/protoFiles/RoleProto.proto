@@ -69,8 +69,7 @@ message EnterGameResp_1001004{
     repeated Item items = 2;//拥有物品
 }
 
-//离线
+//离线广播
 message OutGameReq_1001005{
-}
-message OutGameResp_1001005{
+    optional int32 player_id=1;
 }

@@ -25,6 +25,7 @@ import java.util.List;
 public class UserHandler implements AbstractHandler {
 
     public static final AttributeKey<String> userKey = AttributeKey.valueOf("userID");
+    public static final AttributeKey<Player> roleKey = AttributeKey.valueOf("roleID");
     @Autowired
     private IUserService userService;
     @Autowired

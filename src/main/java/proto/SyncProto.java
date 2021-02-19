@@ -634,7 +634,7 @@ public final class SyncProto {
     // @@protoc_insertion_point(class_scope:protoFiles.PongResp_1001000)
   }
 
-  public interface positionSyncReq_1001006OrBuilder
+  public interface PositionSyncReq_1001006OrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
     // required float x = 1;
@@ -698,28 +698,28 @@ public final class SyncProto {
     float getEz();
   }
   /**
-   * Protobuf type {@code protoFiles.positionSyncReq_1001006}
+   * Protobuf type {@code protoFiles.PositionSyncReq_1001006}
    *
    * <pre>
    *位置同步
    * </pre>
    */
-  public static final class positionSyncReq_1001006 extends
+  public static final class PositionSyncReq_1001006 extends
       com.google.protobuf.GeneratedMessage
-      implements positionSyncReq_1001006OrBuilder {
-    // Use positionSyncReq_1001006.newBuilder() to construct.
-    private positionSyncReq_1001006(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      implements PositionSyncReq_1001006OrBuilder {
+    // Use PositionSyncReq_1001006.newBuilder() to construct.
+    private PositionSyncReq_1001006(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private positionSyncReq_1001006(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private PositionSyncReq_1001006(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final positionSyncReq_1001006 defaultInstance;
-    public static positionSyncReq_1001006 getDefaultInstance() {
+    private static final PositionSyncReq_1001006 defaultInstance;
+    public static PositionSyncReq_1001006 getDefaultInstance() {
       return defaultInstance;
     }
 
-    public positionSyncReq_1001006 getDefaultInstanceForType() {
+    public PositionSyncReq_1001006 getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -729,7 +729,7 @@ public final class SyncProto {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private positionSyncReq_1001006(
+    private PositionSyncReq_1001006(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -796,28 +796,28 @@ public final class SyncProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return proto.SyncProto.internal_static_protoFiles_positionSyncReq_1001006_descriptor;
+      return proto.SyncProto.internal_static_protoFiles_PositionSyncReq_1001006_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return proto.SyncProto.internal_static_protoFiles_positionSyncReq_1001006_fieldAccessorTable
+      return proto.SyncProto.internal_static_protoFiles_PositionSyncReq_1001006_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              proto.SyncProto.positionSyncReq_1001006.class, proto.SyncProto.positionSyncReq_1001006.Builder.class);
+              proto.SyncProto.PositionSyncReq_1001006.class, proto.SyncProto.PositionSyncReq_1001006.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<positionSyncReq_1001006> PARSER =
-        new com.google.protobuf.AbstractParser<positionSyncReq_1001006>() {
-      public positionSyncReq_1001006 parsePartialFrom(
+    public static com.google.protobuf.Parser<PositionSyncReq_1001006> PARSER =
+        new com.google.protobuf.AbstractParser<PositionSyncReq_1001006>() {
+      public PositionSyncReq_1001006 parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new positionSyncReq_1001006(input, extensionRegistry);
+        return new PositionSyncReq_1001006(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<positionSyncReq_1001006> getParserForType() {
+    public com.google.protobuf.Parser<PositionSyncReq_1001006> getParserForType() {
       return PARSER;
     }
 
@@ -1025,53 +1025,53 @@ public final class SyncProto {
       return super.writeReplace();
     }
 
-    public static proto.SyncProto.positionSyncReq_1001006 parseFrom(
+    public static proto.SyncProto.PositionSyncReq_1001006 parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.SyncProto.positionSyncReq_1001006 parseFrom(
+    public static proto.SyncProto.PositionSyncReq_1001006 parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.SyncProto.positionSyncReq_1001006 parseFrom(byte[] data)
+    public static proto.SyncProto.PositionSyncReq_1001006 parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.SyncProto.positionSyncReq_1001006 parseFrom(
+    public static proto.SyncProto.PositionSyncReq_1001006 parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.SyncProto.positionSyncReq_1001006 parseFrom(java.io.InputStream input)
+    public static proto.SyncProto.PositionSyncReq_1001006 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static proto.SyncProto.positionSyncReq_1001006 parseFrom(
+    public static proto.SyncProto.PositionSyncReq_1001006 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static proto.SyncProto.positionSyncReq_1001006 parseDelimitedFrom(java.io.InputStream input)
+    public static proto.SyncProto.PositionSyncReq_1001006 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static proto.SyncProto.positionSyncReq_1001006 parseDelimitedFrom(
+    public static proto.SyncProto.PositionSyncReq_1001006 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static proto.SyncProto.positionSyncReq_1001006 parseFrom(
+    public static proto.SyncProto.PositionSyncReq_1001006 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static proto.SyncProto.positionSyncReq_1001006 parseFrom(
+    public static proto.SyncProto.PositionSyncReq_1001006 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1080,7 +1080,7 @@ public final class SyncProto {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(proto.SyncProto.positionSyncReq_1001006 prototype) {
+    public static Builder newBuilder(proto.SyncProto.PositionSyncReq_1001006 prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -1092,7 +1092,7 @@ public final class SyncProto {
       return builder;
     }
     /**
-     * Protobuf type {@code protoFiles.positionSyncReq_1001006}
+     * Protobuf type {@code protoFiles.PositionSyncReq_1001006}
      *
      * <pre>
      *位置同步
@@ -1100,20 +1100,20 @@ public final class SyncProto {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements proto.SyncProto.positionSyncReq_1001006OrBuilder {
+       implements proto.SyncProto.PositionSyncReq_1001006OrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return proto.SyncProto.internal_static_protoFiles_positionSyncReq_1001006_descriptor;
+        return proto.SyncProto.internal_static_protoFiles_PositionSyncReq_1001006_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return proto.SyncProto.internal_static_protoFiles_positionSyncReq_1001006_fieldAccessorTable
+        return proto.SyncProto.internal_static_protoFiles_PositionSyncReq_1001006_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                proto.SyncProto.positionSyncReq_1001006.class, proto.SyncProto.positionSyncReq_1001006.Builder.class);
+                proto.SyncProto.PositionSyncReq_1001006.class, proto.SyncProto.PositionSyncReq_1001006.Builder.class);
       }
 
-      // Construct using proto.SyncProto.positionSyncReq_1001006.newBuilder()
+      // Construct using proto.SyncProto.PositionSyncReq_1001006.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1154,23 +1154,23 @@ public final class SyncProto {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return proto.SyncProto.internal_static_protoFiles_positionSyncReq_1001006_descriptor;
+        return proto.SyncProto.internal_static_protoFiles_PositionSyncReq_1001006_descriptor;
       }
 
-      public proto.SyncProto.positionSyncReq_1001006 getDefaultInstanceForType() {
-        return proto.SyncProto.positionSyncReq_1001006.getDefaultInstance();
+      public proto.SyncProto.PositionSyncReq_1001006 getDefaultInstanceForType() {
+        return proto.SyncProto.PositionSyncReq_1001006.getDefaultInstance();
       }
 
-      public proto.SyncProto.positionSyncReq_1001006 build() {
-        proto.SyncProto.positionSyncReq_1001006 result = buildPartial();
+      public proto.SyncProto.PositionSyncReq_1001006 build() {
+        proto.SyncProto.PositionSyncReq_1001006 result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public proto.SyncProto.positionSyncReq_1001006 buildPartial() {
-        proto.SyncProto.positionSyncReq_1001006 result = new proto.SyncProto.positionSyncReq_1001006(this);
+      public proto.SyncProto.PositionSyncReq_1001006 buildPartial() {
+        proto.SyncProto.PositionSyncReq_1001006 result = new proto.SyncProto.PositionSyncReq_1001006(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1203,16 +1203,16 @@ public final class SyncProto {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.SyncProto.positionSyncReq_1001006) {
-          return mergeFrom((proto.SyncProto.positionSyncReq_1001006)other);
+        if (other instanceof proto.SyncProto.PositionSyncReq_1001006) {
+          return mergeFrom((proto.SyncProto.PositionSyncReq_1001006)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(proto.SyncProto.positionSyncReq_1001006 other) {
-        if (other == proto.SyncProto.positionSyncReq_1001006.getDefaultInstance()) return this;
+      public Builder mergeFrom(proto.SyncProto.PositionSyncReq_1001006 other) {
+        if (other == proto.SyncProto.PositionSyncReq_1001006.getDefaultInstance()) return this;
         if (other.hasX()) {
           setX(other.getX());
         }
@@ -1267,11 +1267,11 @@ public final class SyncProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.SyncProto.positionSyncReq_1001006 parsedMessage = null;
+        proto.SyncProto.PositionSyncReq_1001006 parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.SyncProto.positionSyncReq_1001006) e.getUnfinishedMessage();
+          parsedMessage = (proto.SyncProto.PositionSyncReq_1001006) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -1480,39 +1480,39 @@ public final class SyncProto {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:protoFiles.positionSyncReq_1001006)
+      // @@protoc_insertion_point(builder_scope:protoFiles.PositionSyncReq_1001006)
     }
 
     static {
-      defaultInstance = new positionSyncReq_1001006(true);
+      defaultInstance = new PositionSyncReq_1001006(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:protoFiles.positionSyncReq_1001006)
+    // @@protoc_insertion_point(class_scope:protoFiles.PositionSyncReq_1001006)
   }
 
-  public interface positionSyncResp_1001006OrBuilder
+  public interface PositionSyncResp_1001006OrBuilder
       extends com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * Protobuf type {@code protoFiles.positionSyncResp_1001006}
+   * Protobuf type {@code protoFiles.PositionSyncResp_1001006}
    */
-  public static final class positionSyncResp_1001006 extends
+  public static final class PositionSyncResp_1001006 extends
       com.google.protobuf.GeneratedMessage
-      implements positionSyncResp_1001006OrBuilder {
-    // Use positionSyncResp_1001006.newBuilder() to construct.
-    private positionSyncResp_1001006(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      implements PositionSyncResp_1001006OrBuilder {
+    // Use PositionSyncResp_1001006.newBuilder() to construct.
+    private PositionSyncResp_1001006(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private positionSyncResp_1001006(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private PositionSyncResp_1001006(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final positionSyncResp_1001006 defaultInstance;
-    public static positionSyncResp_1001006 getDefaultInstance() {
+    private static final PositionSyncResp_1001006 defaultInstance;
+    public static PositionSyncResp_1001006 getDefaultInstance() {
       return defaultInstance;
     }
 
-    public positionSyncResp_1001006 getDefaultInstanceForType() {
+    public PositionSyncResp_1001006 getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -1522,7 +1522,7 @@ public final class SyncProto {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private positionSyncResp_1001006(
+    private PositionSyncResp_1001006(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1558,28 +1558,28 @@ public final class SyncProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return proto.SyncProto.internal_static_protoFiles_positionSyncResp_1001006_descriptor;
+      return proto.SyncProto.internal_static_protoFiles_PositionSyncResp_1001006_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return proto.SyncProto.internal_static_protoFiles_positionSyncResp_1001006_fieldAccessorTable
+      return proto.SyncProto.internal_static_protoFiles_PositionSyncResp_1001006_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              proto.SyncProto.positionSyncResp_1001006.class, proto.SyncProto.positionSyncResp_1001006.Builder.class);
+              proto.SyncProto.PositionSyncResp_1001006.class, proto.SyncProto.PositionSyncResp_1001006.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<positionSyncResp_1001006> PARSER =
-        new com.google.protobuf.AbstractParser<positionSyncResp_1001006>() {
-      public positionSyncResp_1001006 parsePartialFrom(
+    public static com.google.protobuf.Parser<PositionSyncResp_1001006> PARSER =
+        new com.google.protobuf.AbstractParser<PositionSyncResp_1001006>() {
+      public PositionSyncResp_1001006 parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new positionSyncResp_1001006(input, extensionRegistry);
+        return new PositionSyncResp_1001006(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<positionSyncResp_1001006> getParserForType() {
+    public com.google.protobuf.Parser<PositionSyncResp_1001006> getParserForType() {
       return PARSER;
     }
 
@@ -1618,53 +1618,53 @@ public final class SyncProto {
       return super.writeReplace();
     }
 
-    public static proto.SyncProto.positionSyncResp_1001006 parseFrom(
+    public static proto.SyncProto.PositionSyncResp_1001006 parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.SyncProto.positionSyncResp_1001006 parseFrom(
+    public static proto.SyncProto.PositionSyncResp_1001006 parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.SyncProto.positionSyncResp_1001006 parseFrom(byte[] data)
+    public static proto.SyncProto.PositionSyncResp_1001006 parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.SyncProto.positionSyncResp_1001006 parseFrom(
+    public static proto.SyncProto.PositionSyncResp_1001006 parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.SyncProto.positionSyncResp_1001006 parseFrom(java.io.InputStream input)
+    public static proto.SyncProto.PositionSyncResp_1001006 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static proto.SyncProto.positionSyncResp_1001006 parseFrom(
+    public static proto.SyncProto.PositionSyncResp_1001006 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static proto.SyncProto.positionSyncResp_1001006 parseDelimitedFrom(java.io.InputStream input)
+    public static proto.SyncProto.PositionSyncResp_1001006 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static proto.SyncProto.positionSyncResp_1001006 parseDelimitedFrom(
+    public static proto.SyncProto.PositionSyncResp_1001006 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static proto.SyncProto.positionSyncResp_1001006 parseFrom(
+    public static proto.SyncProto.PositionSyncResp_1001006 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static proto.SyncProto.positionSyncResp_1001006 parseFrom(
+    public static proto.SyncProto.PositionSyncResp_1001006 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1673,7 +1673,7 @@ public final class SyncProto {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(proto.SyncProto.positionSyncResp_1001006 prototype) {
+    public static Builder newBuilder(proto.SyncProto.PositionSyncResp_1001006 prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -1685,24 +1685,24 @@ public final class SyncProto {
       return builder;
     }
     /**
-     * Protobuf type {@code protoFiles.positionSyncResp_1001006}
+     * Protobuf type {@code protoFiles.PositionSyncResp_1001006}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements proto.SyncProto.positionSyncResp_1001006OrBuilder {
+       implements proto.SyncProto.PositionSyncResp_1001006OrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return proto.SyncProto.internal_static_protoFiles_positionSyncResp_1001006_descriptor;
+        return proto.SyncProto.internal_static_protoFiles_PositionSyncResp_1001006_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return proto.SyncProto.internal_static_protoFiles_positionSyncResp_1001006_fieldAccessorTable
+        return proto.SyncProto.internal_static_protoFiles_PositionSyncResp_1001006_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                proto.SyncProto.positionSyncResp_1001006.class, proto.SyncProto.positionSyncResp_1001006.Builder.class);
+                proto.SyncProto.PositionSyncResp_1001006.class, proto.SyncProto.PositionSyncResp_1001006.Builder.class);
       }
 
-      // Construct using proto.SyncProto.positionSyncResp_1001006.newBuilder()
+      // Construct using proto.SyncProto.PositionSyncResp_1001006.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1731,38 +1731,38 @@ public final class SyncProto {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return proto.SyncProto.internal_static_protoFiles_positionSyncResp_1001006_descriptor;
+        return proto.SyncProto.internal_static_protoFiles_PositionSyncResp_1001006_descriptor;
       }
 
-      public proto.SyncProto.positionSyncResp_1001006 getDefaultInstanceForType() {
-        return proto.SyncProto.positionSyncResp_1001006.getDefaultInstance();
+      public proto.SyncProto.PositionSyncResp_1001006 getDefaultInstanceForType() {
+        return proto.SyncProto.PositionSyncResp_1001006.getDefaultInstance();
       }
 
-      public proto.SyncProto.positionSyncResp_1001006 build() {
-        proto.SyncProto.positionSyncResp_1001006 result = buildPartial();
+      public proto.SyncProto.PositionSyncResp_1001006 build() {
+        proto.SyncProto.PositionSyncResp_1001006 result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public proto.SyncProto.positionSyncResp_1001006 buildPartial() {
-        proto.SyncProto.positionSyncResp_1001006 result = new proto.SyncProto.positionSyncResp_1001006(this);
+      public proto.SyncProto.PositionSyncResp_1001006 buildPartial() {
+        proto.SyncProto.PositionSyncResp_1001006 result = new proto.SyncProto.PositionSyncResp_1001006(this);
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.SyncProto.positionSyncResp_1001006) {
-          return mergeFrom((proto.SyncProto.positionSyncResp_1001006)other);
+        if (other instanceof proto.SyncProto.PositionSyncResp_1001006) {
+          return mergeFrom((proto.SyncProto.PositionSyncResp_1001006)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(proto.SyncProto.positionSyncResp_1001006 other) {
-        if (other == proto.SyncProto.positionSyncResp_1001006.getDefaultInstance()) return this;
+      public Builder mergeFrom(proto.SyncProto.PositionSyncResp_1001006 other) {
+        if (other == proto.SyncProto.PositionSyncResp_1001006.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -1775,11 +1775,11 @@ public final class SyncProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.SyncProto.positionSyncResp_1001006 parsedMessage = null;
+        proto.SyncProto.PositionSyncResp_1001006 parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.SyncProto.positionSyncResp_1001006) e.getUnfinishedMessage();
+          parsedMessage = (proto.SyncProto.PositionSyncResp_1001006) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -1789,43 +1789,43 @@ public final class SyncProto {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:protoFiles.positionSyncResp_1001006)
+      // @@protoc_insertion_point(builder_scope:protoFiles.PositionSyncResp_1001006)
     }
 
     static {
-      defaultInstance = new positionSyncResp_1001006(true);
+      defaultInstance = new PositionSyncResp_1001006(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:protoFiles.positionSyncResp_1001006)
+    // @@protoc_insertion_point(class_scope:protoFiles.PositionSyncResp_1001006)
   }
 
-  public interface attackReq_1001007OrBuilder
+  public interface AttackReq_1001007OrBuilder
       extends com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * Protobuf type {@code protoFiles.attackReq_1001007}
+   * Protobuf type {@code protoFiles.AttackReq_1001007}
    *
    * <pre>
    *攻击
    * </pre>
    */
-  public static final class attackReq_1001007 extends
+  public static final class AttackReq_1001007 extends
       com.google.protobuf.GeneratedMessage
-      implements attackReq_1001007OrBuilder {
-    // Use attackReq_1001007.newBuilder() to construct.
-    private attackReq_1001007(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      implements AttackReq_1001007OrBuilder {
+    // Use AttackReq_1001007.newBuilder() to construct.
+    private AttackReq_1001007(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private attackReq_1001007(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private AttackReq_1001007(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final attackReq_1001007 defaultInstance;
-    public static attackReq_1001007 getDefaultInstance() {
+    private static final AttackReq_1001007 defaultInstance;
+    public static AttackReq_1001007 getDefaultInstance() {
       return defaultInstance;
     }
 
-    public attackReq_1001007 getDefaultInstanceForType() {
+    public AttackReq_1001007 getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -1835,7 +1835,7 @@ public final class SyncProto {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private attackReq_1001007(
+    private AttackReq_1001007(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1871,28 +1871,28 @@ public final class SyncProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return proto.SyncProto.internal_static_protoFiles_attackReq_1001007_descriptor;
+      return proto.SyncProto.internal_static_protoFiles_AttackReq_1001007_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return proto.SyncProto.internal_static_protoFiles_attackReq_1001007_fieldAccessorTable
+      return proto.SyncProto.internal_static_protoFiles_AttackReq_1001007_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              proto.SyncProto.attackReq_1001007.class, proto.SyncProto.attackReq_1001007.Builder.class);
+              proto.SyncProto.AttackReq_1001007.class, proto.SyncProto.AttackReq_1001007.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<attackReq_1001007> PARSER =
-        new com.google.protobuf.AbstractParser<attackReq_1001007>() {
-      public attackReq_1001007 parsePartialFrom(
+    public static com.google.protobuf.Parser<AttackReq_1001007> PARSER =
+        new com.google.protobuf.AbstractParser<AttackReq_1001007>() {
+      public AttackReq_1001007 parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new attackReq_1001007(input, extensionRegistry);
+        return new AttackReq_1001007(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<attackReq_1001007> getParserForType() {
+    public com.google.protobuf.Parser<AttackReq_1001007> getParserForType() {
       return PARSER;
     }
 
@@ -1931,53 +1931,53 @@ public final class SyncProto {
       return super.writeReplace();
     }
 
-    public static proto.SyncProto.attackReq_1001007 parseFrom(
+    public static proto.SyncProto.AttackReq_1001007 parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.SyncProto.attackReq_1001007 parseFrom(
+    public static proto.SyncProto.AttackReq_1001007 parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.SyncProto.attackReq_1001007 parseFrom(byte[] data)
+    public static proto.SyncProto.AttackReq_1001007 parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.SyncProto.attackReq_1001007 parseFrom(
+    public static proto.SyncProto.AttackReq_1001007 parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.SyncProto.attackReq_1001007 parseFrom(java.io.InputStream input)
+    public static proto.SyncProto.AttackReq_1001007 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static proto.SyncProto.attackReq_1001007 parseFrom(
+    public static proto.SyncProto.AttackReq_1001007 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static proto.SyncProto.attackReq_1001007 parseDelimitedFrom(java.io.InputStream input)
+    public static proto.SyncProto.AttackReq_1001007 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static proto.SyncProto.attackReq_1001007 parseDelimitedFrom(
+    public static proto.SyncProto.AttackReq_1001007 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static proto.SyncProto.attackReq_1001007 parseFrom(
+    public static proto.SyncProto.AttackReq_1001007 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static proto.SyncProto.attackReq_1001007 parseFrom(
+    public static proto.SyncProto.AttackReq_1001007 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1986,7 +1986,7 @@ public final class SyncProto {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(proto.SyncProto.attackReq_1001007 prototype) {
+    public static Builder newBuilder(proto.SyncProto.AttackReq_1001007 prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -1998,7 +1998,7 @@ public final class SyncProto {
       return builder;
     }
     /**
-     * Protobuf type {@code protoFiles.attackReq_1001007}
+     * Protobuf type {@code protoFiles.AttackReq_1001007}
      *
      * <pre>
      *攻击
@@ -2006,20 +2006,20 @@ public final class SyncProto {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements proto.SyncProto.attackReq_1001007OrBuilder {
+       implements proto.SyncProto.AttackReq_1001007OrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return proto.SyncProto.internal_static_protoFiles_attackReq_1001007_descriptor;
+        return proto.SyncProto.internal_static_protoFiles_AttackReq_1001007_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return proto.SyncProto.internal_static_protoFiles_attackReq_1001007_fieldAccessorTable
+        return proto.SyncProto.internal_static_protoFiles_AttackReq_1001007_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                proto.SyncProto.attackReq_1001007.class, proto.SyncProto.attackReq_1001007.Builder.class);
+                proto.SyncProto.AttackReq_1001007.class, proto.SyncProto.AttackReq_1001007.Builder.class);
       }
 
-      // Construct using proto.SyncProto.attackReq_1001007.newBuilder()
+      // Construct using proto.SyncProto.AttackReq_1001007.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2048,38 +2048,38 @@ public final class SyncProto {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return proto.SyncProto.internal_static_protoFiles_attackReq_1001007_descriptor;
+        return proto.SyncProto.internal_static_protoFiles_AttackReq_1001007_descriptor;
       }
 
-      public proto.SyncProto.attackReq_1001007 getDefaultInstanceForType() {
-        return proto.SyncProto.attackReq_1001007.getDefaultInstance();
+      public proto.SyncProto.AttackReq_1001007 getDefaultInstanceForType() {
+        return proto.SyncProto.AttackReq_1001007.getDefaultInstance();
       }
 
-      public proto.SyncProto.attackReq_1001007 build() {
-        proto.SyncProto.attackReq_1001007 result = buildPartial();
+      public proto.SyncProto.AttackReq_1001007 build() {
+        proto.SyncProto.AttackReq_1001007 result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public proto.SyncProto.attackReq_1001007 buildPartial() {
-        proto.SyncProto.attackReq_1001007 result = new proto.SyncProto.attackReq_1001007(this);
+      public proto.SyncProto.AttackReq_1001007 buildPartial() {
+        proto.SyncProto.AttackReq_1001007 result = new proto.SyncProto.AttackReq_1001007(this);
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.SyncProto.attackReq_1001007) {
-          return mergeFrom((proto.SyncProto.attackReq_1001007)other);
+        if (other instanceof proto.SyncProto.AttackReq_1001007) {
+          return mergeFrom((proto.SyncProto.AttackReq_1001007)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(proto.SyncProto.attackReq_1001007 other) {
-        if (other == proto.SyncProto.attackReq_1001007.getDefaultInstance()) return this;
+      public Builder mergeFrom(proto.SyncProto.AttackReq_1001007 other) {
+        if (other == proto.SyncProto.AttackReq_1001007.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -2092,11 +2092,11 @@ public final class SyncProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.SyncProto.attackReq_1001007 parsedMessage = null;
+        proto.SyncProto.AttackReq_1001007 parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.SyncProto.attackReq_1001007) e.getUnfinishedMessage();
+          parsedMessage = (proto.SyncProto.AttackReq_1001007) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -2106,39 +2106,39 @@ public final class SyncProto {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:protoFiles.attackReq_1001007)
+      // @@protoc_insertion_point(builder_scope:protoFiles.AttackReq_1001007)
     }
 
     static {
-      defaultInstance = new attackReq_1001007(true);
+      defaultInstance = new AttackReq_1001007(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:protoFiles.attackReq_1001007)
+    // @@protoc_insertion_point(class_scope:protoFiles.AttackReq_1001007)
   }
 
-  public interface attackResp_1001007OrBuilder
+  public interface AttackResp_1001007OrBuilder
       extends com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * Protobuf type {@code protoFiles.attackResp_1001007}
+   * Protobuf type {@code protoFiles.AttackResp_1001007}
    */
-  public static final class attackResp_1001007 extends
+  public static final class AttackResp_1001007 extends
       com.google.protobuf.GeneratedMessage
-      implements attackResp_1001007OrBuilder {
-    // Use attackResp_1001007.newBuilder() to construct.
-    private attackResp_1001007(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      implements AttackResp_1001007OrBuilder {
+    // Use AttackResp_1001007.newBuilder() to construct.
+    private AttackResp_1001007(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private attackResp_1001007(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private AttackResp_1001007(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final attackResp_1001007 defaultInstance;
-    public static attackResp_1001007 getDefaultInstance() {
+    private static final AttackResp_1001007 defaultInstance;
+    public static AttackResp_1001007 getDefaultInstance() {
       return defaultInstance;
     }
 
-    public attackResp_1001007 getDefaultInstanceForType() {
+    public AttackResp_1001007 getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -2148,7 +2148,7 @@ public final class SyncProto {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private attackResp_1001007(
+    private AttackResp_1001007(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2184,28 +2184,28 @@ public final class SyncProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return proto.SyncProto.internal_static_protoFiles_attackResp_1001007_descriptor;
+      return proto.SyncProto.internal_static_protoFiles_AttackResp_1001007_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return proto.SyncProto.internal_static_protoFiles_attackResp_1001007_fieldAccessorTable
+      return proto.SyncProto.internal_static_protoFiles_AttackResp_1001007_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              proto.SyncProto.attackResp_1001007.class, proto.SyncProto.attackResp_1001007.Builder.class);
+              proto.SyncProto.AttackResp_1001007.class, proto.SyncProto.AttackResp_1001007.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<attackResp_1001007> PARSER =
-        new com.google.protobuf.AbstractParser<attackResp_1001007>() {
-      public attackResp_1001007 parsePartialFrom(
+    public static com.google.protobuf.Parser<AttackResp_1001007> PARSER =
+        new com.google.protobuf.AbstractParser<AttackResp_1001007>() {
+      public AttackResp_1001007 parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new attackResp_1001007(input, extensionRegistry);
+        return new AttackResp_1001007(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<attackResp_1001007> getParserForType() {
+    public com.google.protobuf.Parser<AttackResp_1001007> getParserForType() {
       return PARSER;
     }
 
@@ -2244,53 +2244,53 @@ public final class SyncProto {
       return super.writeReplace();
     }
 
-    public static proto.SyncProto.attackResp_1001007 parseFrom(
+    public static proto.SyncProto.AttackResp_1001007 parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.SyncProto.attackResp_1001007 parseFrom(
+    public static proto.SyncProto.AttackResp_1001007 parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.SyncProto.attackResp_1001007 parseFrom(byte[] data)
+    public static proto.SyncProto.AttackResp_1001007 parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.SyncProto.attackResp_1001007 parseFrom(
+    public static proto.SyncProto.AttackResp_1001007 parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.SyncProto.attackResp_1001007 parseFrom(java.io.InputStream input)
+    public static proto.SyncProto.AttackResp_1001007 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static proto.SyncProto.attackResp_1001007 parseFrom(
+    public static proto.SyncProto.AttackResp_1001007 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static proto.SyncProto.attackResp_1001007 parseDelimitedFrom(java.io.InputStream input)
+    public static proto.SyncProto.AttackResp_1001007 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static proto.SyncProto.attackResp_1001007 parseDelimitedFrom(
+    public static proto.SyncProto.AttackResp_1001007 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static proto.SyncProto.attackResp_1001007 parseFrom(
+    public static proto.SyncProto.AttackResp_1001007 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static proto.SyncProto.attackResp_1001007 parseFrom(
+    public static proto.SyncProto.AttackResp_1001007 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2299,7 +2299,7 @@ public final class SyncProto {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(proto.SyncProto.attackResp_1001007 prototype) {
+    public static Builder newBuilder(proto.SyncProto.AttackResp_1001007 prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -2311,24 +2311,24 @@ public final class SyncProto {
       return builder;
     }
     /**
-     * Protobuf type {@code protoFiles.attackResp_1001007}
+     * Protobuf type {@code protoFiles.AttackResp_1001007}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements proto.SyncProto.attackResp_1001007OrBuilder {
+       implements proto.SyncProto.AttackResp_1001007OrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return proto.SyncProto.internal_static_protoFiles_attackResp_1001007_descriptor;
+        return proto.SyncProto.internal_static_protoFiles_AttackResp_1001007_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return proto.SyncProto.internal_static_protoFiles_attackResp_1001007_fieldAccessorTable
+        return proto.SyncProto.internal_static_protoFiles_AttackResp_1001007_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                proto.SyncProto.attackResp_1001007.class, proto.SyncProto.attackResp_1001007.Builder.class);
+                proto.SyncProto.AttackResp_1001007.class, proto.SyncProto.AttackResp_1001007.Builder.class);
       }
 
-      // Construct using proto.SyncProto.attackResp_1001007.newBuilder()
+      // Construct using proto.SyncProto.AttackResp_1001007.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2357,38 +2357,38 @@ public final class SyncProto {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return proto.SyncProto.internal_static_protoFiles_attackResp_1001007_descriptor;
+        return proto.SyncProto.internal_static_protoFiles_AttackResp_1001007_descriptor;
       }
 
-      public proto.SyncProto.attackResp_1001007 getDefaultInstanceForType() {
-        return proto.SyncProto.attackResp_1001007.getDefaultInstance();
+      public proto.SyncProto.AttackResp_1001007 getDefaultInstanceForType() {
+        return proto.SyncProto.AttackResp_1001007.getDefaultInstance();
       }
 
-      public proto.SyncProto.attackResp_1001007 build() {
-        proto.SyncProto.attackResp_1001007 result = buildPartial();
+      public proto.SyncProto.AttackResp_1001007 build() {
+        proto.SyncProto.AttackResp_1001007 result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public proto.SyncProto.attackResp_1001007 buildPartial() {
-        proto.SyncProto.attackResp_1001007 result = new proto.SyncProto.attackResp_1001007(this);
+      public proto.SyncProto.AttackResp_1001007 buildPartial() {
+        proto.SyncProto.AttackResp_1001007 result = new proto.SyncProto.AttackResp_1001007(this);
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.SyncProto.attackResp_1001007) {
-          return mergeFrom((proto.SyncProto.attackResp_1001007)other);
+        if (other instanceof proto.SyncProto.AttackResp_1001007) {
+          return mergeFrom((proto.SyncProto.AttackResp_1001007)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(proto.SyncProto.attackResp_1001007 other) {
-        if (other == proto.SyncProto.attackResp_1001007.getDefaultInstance()) return this;
+      public Builder mergeFrom(proto.SyncProto.AttackResp_1001007 other) {
+        if (other == proto.SyncProto.AttackResp_1001007.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -2401,11 +2401,11 @@ public final class SyncProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.SyncProto.attackResp_1001007 parsedMessage = null;
+        proto.SyncProto.AttackResp_1001007 parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.SyncProto.attackResp_1001007) e.getUnfinishedMessage();
+          parsedMessage = (proto.SyncProto.AttackResp_1001007) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -2415,15 +2415,15 @@ public final class SyncProto {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:protoFiles.attackResp_1001007)
+      // @@protoc_insertion_point(builder_scope:protoFiles.AttackResp_1001007)
     }
 
     static {
-      defaultInstance = new attackResp_1001007(true);
+      defaultInstance = new AttackResp_1001007(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:protoFiles.attackResp_1001007)
+    // @@protoc_insertion_point(class_scope:protoFiles.AttackResp_1001007)
   }
 
   private static com.google.protobuf.Descriptors.Descriptor
@@ -2437,25 +2437,25 @@ public final class SyncProto {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_protoFiles_PongResp_1001000_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_protoFiles_positionSyncReq_1001006_descriptor;
+    internal_static_protoFiles_PositionSyncReq_1001006_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_protoFiles_positionSyncReq_1001006_fieldAccessorTable;
+      internal_static_protoFiles_PositionSyncReq_1001006_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_protoFiles_positionSyncResp_1001006_descriptor;
+    internal_static_protoFiles_PositionSyncResp_1001006_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_protoFiles_positionSyncResp_1001006_fieldAccessorTable;
+      internal_static_protoFiles_PositionSyncResp_1001006_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_protoFiles_attackReq_1001007_descriptor;
+    internal_static_protoFiles_AttackReq_1001007_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_protoFiles_attackReq_1001007_fieldAccessorTable;
+      internal_static_protoFiles_AttackReq_1001007_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_protoFiles_attackResp_1001007_descriptor;
+    internal_static_protoFiles_AttackResp_1001007_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_protoFiles_attackResp_1001007_fieldAccessorTable;
+      internal_static_protoFiles_AttackResp_1001007_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2466,11 +2466,11 @@ public final class SyncProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\017SyncProto.proto\022\nprotoFiles\"\021\n\017PingReq" +
-      "_1001000\"\022\n\020PongResp_1001000\"^\n\027position" +
+      "_1001000\"\022\n\020PongResp_1001000\"^\n\027Position" +
       "SyncReq_1001006\022\t\n\001x\030\001 \002(\002\022\t\n\001y\030\002 \002(\002\022\t\n" +
       "\001z\030\003 \002(\002\022\n\n\002ex\030\004 \002(\002\022\n\n\002ey\030\005 \002(\002\022\n\n\002ez\030\006" +
-      " \002(\002\"\032\n\030positionSyncResp_1001006\"\023\n\021atta" +
-      "ckReq_1001007\"\024\n\022attackResp_1001007B\022\n\005p" +
+      " \002(\002\"\032\n\030PositionSyncResp_1001006\"\023\n\021Atta" +
+      "ckReq_1001007\"\024\n\022AttackResp_1001007B\022\n\005p" +
       "rotoB\tSyncProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
@@ -2490,29 +2490,29 @@ public final class SyncProto {
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_protoFiles_PongResp_1001000_descriptor,
               new java.lang.String[] { });
-          internal_static_protoFiles_positionSyncReq_1001006_descriptor =
+          internal_static_protoFiles_PositionSyncReq_1001006_descriptor =
             getDescriptor().getMessageTypes().get(2);
-          internal_static_protoFiles_positionSyncReq_1001006_fieldAccessorTable = new
+          internal_static_protoFiles_PositionSyncReq_1001006_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_protoFiles_positionSyncReq_1001006_descriptor,
+              internal_static_protoFiles_PositionSyncReq_1001006_descriptor,
               new java.lang.String[] { "X", "Y", "Z", "Ex", "Ey", "Ez", });
-          internal_static_protoFiles_positionSyncResp_1001006_descriptor =
+          internal_static_protoFiles_PositionSyncResp_1001006_descriptor =
             getDescriptor().getMessageTypes().get(3);
-          internal_static_protoFiles_positionSyncResp_1001006_fieldAccessorTable = new
+          internal_static_protoFiles_PositionSyncResp_1001006_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_protoFiles_positionSyncResp_1001006_descriptor,
+              internal_static_protoFiles_PositionSyncResp_1001006_descriptor,
               new java.lang.String[] { });
-          internal_static_protoFiles_attackReq_1001007_descriptor =
+          internal_static_protoFiles_AttackReq_1001007_descriptor =
             getDescriptor().getMessageTypes().get(4);
-          internal_static_protoFiles_attackReq_1001007_fieldAccessorTable = new
+          internal_static_protoFiles_AttackReq_1001007_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_protoFiles_attackReq_1001007_descriptor,
+              internal_static_protoFiles_AttackReq_1001007_descriptor,
               new java.lang.String[] { });
-          internal_static_protoFiles_attackResp_1001007_descriptor =
+          internal_static_protoFiles_AttackResp_1001007_descriptor =
             getDescriptor().getMessageTypes().get(5);
-          internal_static_protoFiles_attackResp_1001007_fieldAccessorTable = new
+          internal_static_protoFiles_AttackResp_1001007_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_protoFiles_attackResp_1001007_descriptor,
+              internal_static_protoFiles_AttackResp_1001007_descriptor,
               new java.lang.String[] { });
           return null;
         }

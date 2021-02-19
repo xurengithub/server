@@ -10,7 +10,7 @@ message PongResp_1001000{
 }
 
 //位置同步
-message positionSyncReq_1001006{
+message PositionSyncReq_1001006{
     required float x = 1;
     required float y = 2;
     required float z = 3;
@@ -18,13 +18,13 @@ message positionSyncReq_1001006{
     required float ey = 5;
     required float ez = 6;
 }
-message positionSyncResp_1001006{
+message PositionSyncResp_1001006{
 
 }
 
 //攻击
-message attackReq_1001007{
+message AttackReq_1001007{
 
 }
-message attackResp_1001007{
+message AttackResp_1001007{
 }

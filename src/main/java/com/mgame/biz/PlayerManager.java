@@ -1,5 +1,7 @@
 package com.mgame.biz;
 
+import com.google.protobuf.Message;
+
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -24,5 +26,11 @@ public class PlayerManager {
 
     public static void removePlayer(long playerId){
         players.remove(playerId);
+    }
+
+    public synchronized static void send(Message message) {
+        for (Player player : players.values()) {
+            player.send(message);
+        }
     }
 }
