@@ -856,6 +856,16 @@ public final class RoleProto {
      */
     proto.RoleProto.RoleOrBuilder getRolesOrBuilder(
         int index);
+
+    // required int32 code = 4;
+    /**
+     * <code>required int32 code = 4;</code>
+     */
+    boolean hasCode();
+    /**
+     * <code>required int32 code = 4;</code>
+     */
+    int getCode();
   }
   /**
    * Protobuf type {@code protoFiles.LoginResp_1001001}
@@ -924,6 +934,11 @@ public final class RoleProto {
                 mutable_bitField0_ |= 0x00000004;
               }
               roles_.add(input.readMessage(proto.RoleProto.Role.PARSER, extensionRegistry));
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000004;
+              code_ = input.readInt32();
               break;
             }
           }
@@ -1135,10 +1150,27 @@ public final class RoleProto {
       return roles_.get(index);
     }
 
+    // required int32 code = 4;
+    public static final int CODE_FIELD_NUMBER = 4;
+    private int code_;
+    /**
+     * <code>required int32 code = 4;</code>
+     */
+    public boolean hasCode() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required int32 code = 4;</code>
+     */
+    public int getCode() {
+      return code_;
+    }
+
     private void initFields() {
       account_ = "";
       rid_ = "";
       roles_ = java.util.Collections.emptyList();
+      code_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1146,6 +1178,10 @@ public final class RoleProto {
       if (isInitialized != -1) return isInitialized == 1;
 
       if (!hasAccount()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasCode()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -1171,6 +1207,9 @@ public final class RoleProto {
       for (int i = 0; i < roles_.size(); i++) {
         output.writeMessage(3, roles_.get(i));
       }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(4, code_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1191,6 +1230,10 @@ public final class RoleProto {
       for (int i = 0; i < roles_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, roles_.get(i));
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, code_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1319,6 +1362,8 @@ public final class RoleProto {
         } else {
           rolesBuilder_.clear();
         }
+        code_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -1364,6 +1409,10 @@ public final class RoleProto {
         } else {
           result.roles_ = rolesBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.code_ = code_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1416,12 +1465,19 @@ public final class RoleProto {
             }
           }
         }
+        if (other.hasCode()) {
+          setCode(other.getCode());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
         if (!hasAccount()) {
+          
+          return false;
+        }
+        if (!hasCode()) {
           
           return false;
         }
@@ -1959,6 +2015,39 @@ public final class RoleProto {
           roles_ = null;
         }
         return rolesBuilder_;
+      }
+
+      // required int32 code = 4;
+      private int code_ ;
+      /**
+       * <code>required int32 code = 4;</code>
+       */
+      public boolean hasCode() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required int32 code = 4;</code>
+       */
+      public int getCode() {
+        return code_;
+      }
+      /**
+       * <code>required int32 code = 4;</code>
+       */
+      public Builder setCode(int value) {
+        bitField0_ |= 0x00000008;
+        code_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 code = 4;</code>
+       */
+      public Builder clearCode() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        code_ = 0;
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:protoFiles.LoginResp_1001001)
@@ -2557,9 +2646,9 @@ public final class RoleProto {
   public interface RoleOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // required int32 id = 1;
+    // required uint32 id = 1;
     /**
-     * <code>required int32 id = 1;</code>
+     * <code>required uint32 id = 1;</code>
      *
      * <pre>
      *id
@@ -2567,7 +2656,7 @@ public final class RoleProto {
      */
     boolean hasId();
     /**
-     * <code>required int32 id = 1;</code>
+     * <code>required uint32 id = 1;</code>
      *
      * <pre>
      *id
@@ -2602,9 +2691,9 @@ public final class RoleProto {
     com.google.protobuf.ByteString
         getNameBytes();
 
-    // optional int32 coin = 3;
+    // optional uint32 coin = 3;
     /**
-     * <code>optional int32 coin = 3;</code>
+     * <code>optional uint32 coin = 3;</code>
      *
      * <pre>
      *金币数
@@ -2612,7 +2701,7 @@ public final class RoleProto {
      */
     boolean hasCoin();
     /**
-     * <code>optional int32 coin = 3;</code>
+     * <code>optional uint32 coin = 3;</code>
      *
      * <pre>
      *金币数
@@ -2620,9 +2709,9 @@ public final class RoleProto {
      */
     int getCoin();
 
-    // optional int32 gem = 4;
+    // optional uint32 gem = 4;
     /**
-     * <code>optional int32 gem = 4;</code>
+     * <code>optional uint32 gem = 4;</code>
      *
      * <pre>
      *钻石
@@ -2630,7 +2719,7 @@ public final class RoleProto {
      */
     boolean hasGem();
     /**
-     * <code>optional int32 gem = 4;</code>
+     * <code>optional uint32 gem = 4;</code>
      *
      * <pre>
      *钻石
@@ -2638,9 +2727,9 @@ public final class RoleProto {
      */
     int getGem();
 
-    // optional int32 exp = 5;
+    // optional uint32 exp = 5;
     /**
-     * <code>optional int32 exp = 5;</code>
+     * <code>optional uint32 exp = 5;</code>
      *
      * <pre>
      *经验
@@ -2648,7 +2737,7 @@ public final class RoleProto {
      */
     boolean hasExp();
     /**
-     * <code>optional int32 exp = 5;</code>
+     * <code>optional uint32 exp = 5;</code>
      *
      * <pre>
      *经验
@@ -2761,43 +2850,43 @@ public final class RoleProto {
      */
     float getEz();
 
-    // optional int32 hp = 14;
+    // optional uint32 hp = 14;
     /**
-     * <code>optional int32 hp = 14;</code>
+     * <code>optional uint32 hp = 14;</code>
      */
     boolean hasHp();
     /**
-     * <code>optional int32 hp = 14;</code>
+     * <code>optional uint32 hp = 14;</code>
      */
     int getHp();
 
-    // optional int32 mp = 15;
+    // optional uint32 mp = 15;
     /**
-     * <code>optional int32 mp = 15;</code>
+     * <code>optional uint32 mp = 15;</code>
      */
     boolean hasMp();
     /**
-     * <code>optional int32 mp = 15;</code>
+     * <code>optional uint32 mp = 15;</code>
      */
     int getMp();
 
-    // optional int32 max_hp = 16;
+    // optional uint32 max_hp = 16;
     /**
-     * <code>optional int32 max_hp = 16;</code>
+     * <code>optional uint32 max_hp = 16;</code>
      */
     boolean hasMaxHp();
     /**
-     * <code>optional int32 max_hp = 16;</code>
+     * <code>optional uint32 max_hp = 16;</code>
      */
     int getMaxHp();
 
-    // optional int32 max_mp = 17;
+    // optional uint32 max_mp = 17;
     /**
-     * <code>optional int32 max_mp = 17;</code>
+     * <code>optional uint32 max_mp = 17;</code>
      */
     boolean hasMaxMp();
     /**
-     * <code>optional int32 max_mp = 17;</code>
+     * <code>optional uint32 max_mp = 17;</code>
      */
     int getMaxMp();
   }
@@ -2854,7 +2943,7 @@ public final class RoleProto {
             }
             case 8: {
               bitField0_ |= 0x00000001;
-              id_ = input.readInt32();
+              id_ = input.readUInt32();
               break;
             }
             case 18: {
@@ -2864,17 +2953,17 @@ public final class RoleProto {
             }
             case 24: {
               bitField0_ |= 0x00000004;
-              coin_ = input.readInt32();
+              coin_ = input.readUInt32();
               break;
             }
             case 32: {
               bitField0_ |= 0x00000008;
-              gem_ = input.readInt32();
+              gem_ = input.readUInt32();
               break;
             }
             case 40: {
               bitField0_ |= 0x00000010;
-              exp_ = input.readInt32();
+              exp_ = input.readUInt32();
               break;
             }
             case 50: {
@@ -2919,22 +3008,22 @@ public final class RoleProto {
             }
             case 112: {
               bitField0_ |= 0x00002000;
-              hp_ = input.readInt32();
+              hp_ = input.readUInt32();
               break;
             }
             case 120: {
               bitField0_ |= 0x00004000;
-              mp_ = input.readInt32();
+              mp_ = input.readUInt32();
               break;
             }
             case 128: {
               bitField0_ |= 0x00008000;
-              maxHp_ = input.readInt32();
+              maxHp_ = input.readUInt32();
               break;
             }
             case 136: {
               bitField0_ |= 0x00010000;
-              maxMp_ = input.readInt32();
+              maxMp_ = input.readUInt32();
               break;
             }
           }
@@ -2977,11 +3066,11 @@ public final class RoleProto {
     }
 
     private int bitField0_;
-    // required int32 id = 1;
+    // required uint32 id = 1;
     public static final int ID_FIELD_NUMBER = 1;
     private int id_;
     /**
-     * <code>required int32 id = 1;</code>
+     * <code>required uint32 id = 1;</code>
      *
      * <pre>
      *id
@@ -2991,7 +3080,7 @@ public final class RoleProto {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required int32 id = 1;</code>
+     * <code>required uint32 id = 1;</code>
      *
      * <pre>
      *id
@@ -3056,11 +3145,11 @@ public final class RoleProto {
       }
     }
 
-    // optional int32 coin = 3;
+    // optional uint32 coin = 3;
     public static final int COIN_FIELD_NUMBER = 3;
     private int coin_;
     /**
-     * <code>optional int32 coin = 3;</code>
+     * <code>optional uint32 coin = 3;</code>
      *
      * <pre>
      *金币数
@@ -3070,7 +3159,7 @@ public final class RoleProto {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional int32 coin = 3;</code>
+     * <code>optional uint32 coin = 3;</code>
      *
      * <pre>
      *金币数
@@ -3080,11 +3169,11 @@ public final class RoleProto {
       return coin_;
     }
 
-    // optional int32 gem = 4;
+    // optional uint32 gem = 4;
     public static final int GEM_FIELD_NUMBER = 4;
     private int gem_;
     /**
-     * <code>optional int32 gem = 4;</code>
+     * <code>optional uint32 gem = 4;</code>
      *
      * <pre>
      *钻石
@@ -3094,7 +3183,7 @@ public final class RoleProto {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>optional int32 gem = 4;</code>
+     * <code>optional uint32 gem = 4;</code>
      *
      * <pre>
      *钻石
@@ -3104,11 +3193,11 @@ public final class RoleProto {
       return gem_;
     }
 
-    // optional int32 exp = 5;
+    // optional uint32 exp = 5;
     public static final int EXP_FIELD_NUMBER = 5;
     private int exp_;
     /**
-     * <code>optional int32 exp = 5;</code>
+     * <code>optional uint32 exp = 5;</code>
      *
      * <pre>
      *经验
@@ -3118,7 +3207,7 @@ public final class RoleProto {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
-     * <code>optional int32 exp = 5;</code>
+     * <code>optional uint32 exp = 5;</code>
      *
      * <pre>
      *经验
@@ -3303,65 +3392,65 @@ public final class RoleProto {
       return ez_;
     }
 
-    // optional int32 hp = 14;
+    // optional uint32 hp = 14;
     public static final int HP_FIELD_NUMBER = 14;
     private int hp_;
     /**
-     * <code>optional int32 hp = 14;</code>
+     * <code>optional uint32 hp = 14;</code>
      */
     public boolean hasHp() {
       return ((bitField0_ & 0x00002000) == 0x00002000);
     }
     /**
-     * <code>optional int32 hp = 14;</code>
+     * <code>optional uint32 hp = 14;</code>
      */
     public int getHp() {
       return hp_;
     }
 
-    // optional int32 mp = 15;
+    // optional uint32 mp = 15;
     public static final int MP_FIELD_NUMBER = 15;
     private int mp_;
     /**
-     * <code>optional int32 mp = 15;</code>
+     * <code>optional uint32 mp = 15;</code>
      */
     public boolean hasMp() {
       return ((bitField0_ & 0x00004000) == 0x00004000);
     }
     /**
-     * <code>optional int32 mp = 15;</code>
+     * <code>optional uint32 mp = 15;</code>
      */
     public int getMp() {
       return mp_;
     }
 
-    // optional int32 max_hp = 16;
+    // optional uint32 max_hp = 16;
     public static final int MAX_HP_FIELD_NUMBER = 16;
     private int maxHp_;
     /**
-     * <code>optional int32 max_hp = 16;</code>
+     * <code>optional uint32 max_hp = 16;</code>
      */
     public boolean hasMaxHp() {
       return ((bitField0_ & 0x00008000) == 0x00008000);
     }
     /**
-     * <code>optional int32 max_hp = 16;</code>
+     * <code>optional uint32 max_hp = 16;</code>
      */
     public int getMaxHp() {
       return maxHp_;
     }
 
-    // optional int32 max_mp = 17;
+    // optional uint32 max_mp = 17;
     public static final int MAX_MP_FIELD_NUMBER = 17;
     private int maxMp_;
     /**
-     * <code>optional int32 max_mp = 17;</code>
+     * <code>optional uint32 max_mp = 17;</code>
      */
     public boolean hasMaxMp() {
       return ((bitField0_ & 0x00010000) == 0x00010000);
     }
     /**
-     * <code>optional int32 max_mp = 17;</code>
+     * <code>optional uint32 max_mp = 17;</code>
      */
     public int getMaxMp() {
       return maxMp_;
@@ -3407,19 +3496,19 @@ public final class RoleProto {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeInt32(1, id_);
+        output.writeUInt32(1, id_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeBytes(2, getNameBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeInt32(3, coin_);
+        output.writeUInt32(3, coin_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeInt32(4, gem_);
+        output.writeUInt32(4, gem_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeInt32(5, exp_);
+        output.writeUInt32(5, exp_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         output.writeBytes(6, getSceneBytes());
@@ -3446,16 +3535,16 @@ public final class RoleProto {
         output.writeFloat(13, ez_);
       }
       if (((bitField0_ & 0x00002000) == 0x00002000)) {
-        output.writeInt32(14, hp_);
+        output.writeUInt32(14, hp_);
       }
       if (((bitField0_ & 0x00004000) == 0x00004000)) {
-        output.writeInt32(15, mp_);
+        output.writeUInt32(15, mp_);
       }
       if (((bitField0_ & 0x00008000) == 0x00008000)) {
-        output.writeInt32(16, maxHp_);
+        output.writeUInt32(16, maxHp_);
       }
       if (((bitField0_ & 0x00010000) == 0x00010000)) {
-        output.writeInt32(17, maxMp_);
+        output.writeUInt32(17, maxMp_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3468,7 +3557,7 @@ public final class RoleProto {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, id_);
+          .computeUInt32Size(1, id_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
@@ -3476,15 +3565,15 @@ public final class RoleProto {
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, coin_);
+          .computeUInt32Size(3, coin_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, gem_);
+          .computeUInt32Size(4, gem_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, exp_);
+          .computeUInt32Size(5, exp_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
@@ -3520,19 +3609,19 @@ public final class RoleProto {
       }
       if (((bitField0_ & 0x00002000) == 0x00002000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(14, hp_);
+          .computeUInt32Size(14, hp_);
       }
       if (((bitField0_ & 0x00004000) == 0x00004000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(15, mp_);
+          .computeUInt32Size(15, mp_);
       }
       if (((bitField0_ & 0x00008000) == 0x00008000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(16, maxHp_);
+          .computeUInt32Size(16, maxHp_);
       }
       if (((bitField0_ & 0x00010000) == 0x00010000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(17, maxMp_);
+          .computeUInt32Size(17, maxMp_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -3886,10 +3975,10 @@ public final class RoleProto {
       }
       private int bitField0_;
 
-      // required int32 id = 1;
+      // required uint32 id = 1;
       private int id_ ;
       /**
-       * <code>required int32 id = 1;</code>
+       * <code>required uint32 id = 1;</code>
        *
        * <pre>
        *id
@@ -3899,7 +3988,7 @@ public final class RoleProto {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 id = 1;</code>
+       * <code>required uint32 id = 1;</code>
        *
        * <pre>
        *id
@@ -3909,7 +3998,7 @@ public final class RoleProto {
         return id_;
       }
       /**
-       * <code>required int32 id = 1;</code>
+       * <code>required uint32 id = 1;</code>
        *
        * <pre>
        *id
@@ -3922,7 +4011,7 @@ public final class RoleProto {
         return this;
       }
       /**
-       * <code>required int32 id = 1;</code>
+       * <code>required uint32 id = 1;</code>
        *
        * <pre>
        *id
@@ -4033,10 +4122,10 @@ public final class RoleProto {
         return this;
       }
 
-      // optional int32 coin = 3;
+      // optional uint32 coin = 3;
       private int coin_ ;
       /**
-       * <code>optional int32 coin = 3;</code>
+       * <code>optional uint32 coin = 3;</code>
        *
        * <pre>
        *金币数
@@ -4046,7 +4135,7 @@ public final class RoleProto {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional int32 coin = 3;</code>
+       * <code>optional uint32 coin = 3;</code>
        *
        * <pre>
        *金币数
@@ -4056,7 +4145,7 @@ public final class RoleProto {
         return coin_;
       }
       /**
-       * <code>optional int32 coin = 3;</code>
+       * <code>optional uint32 coin = 3;</code>
        *
        * <pre>
        *金币数
@@ -4069,7 +4158,7 @@ public final class RoleProto {
         return this;
       }
       /**
-       * <code>optional int32 coin = 3;</code>
+       * <code>optional uint32 coin = 3;</code>
        *
        * <pre>
        *金币数
@@ -4082,10 +4171,10 @@ public final class RoleProto {
         return this;
       }
 
-      // optional int32 gem = 4;
+      // optional uint32 gem = 4;
       private int gem_ ;
       /**
-       * <code>optional int32 gem = 4;</code>
+       * <code>optional uint32 gem = 4;</code>
        *
        * <pre>
        *钻石
@@ -4095,7 +4184,7 @@ public final class RoleProto {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>optional int32 gem = 4;</code>
+       * <code>optional uint32 gem = 4;</code>
        *
        * <pre>
        *钻石
@@ -4105,7 +4194,7 @@ public final class RoleProto {
         return gem_;
       }
       /**
-       * <code>optional int32 gem = 4;</code>
+       * <code>optional uint32 gem = 4;</code>
        *
        * <pre>
        *钻石
@@ -4118,7 +4207,7 @@ public final class RoleProto {
         return this;
       }
       /**
-       * <code>optional int32 gem = 4;</code>
+       * <code>optional uint32 gem = 4;</code>
        *
        * <pre>
        *钻石
@@ -4131,10 +4220,10 @@ public final class RoleProto {
         return this;
       }
 
-      // optional int32 exp = 5;
+      // optional uint32 exp = 5;
       private int exp_ ;
       /**
-       * <code>optional int32 exp = 5;</code>
+       * <code>optional uint32 exp = 5;</code>
        *
        * <pre>
        *经验
@@ -4144,7 +4233,7 @@ public final class RoleProto {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>optional int32 exp = 5;</code>
+       * <code>optional uint32 exp = 5;</code>
        *
        * <pre>
        *经验
@@ -4154,7 +4243,7 @@ public final class RoleProto {
         return exp_;
       }
       /**
-       * <code>optional int32 exp = 5;</code>
+       * <code>optional uint32 exp = 5;</code>
        *
        * <pre>
        *经验
@@ -4167,7 +4256,7 @@ public final class RoleProto {
         return this;
       }
       /**
-       * <code>optional int32 exp = 5;</code>
+       * <code>optional uint32 exp = 5;</code>
        *
        * <pre>
        *经验
@@ -4525,22 +4614,22 @@ public final class RoleProto {
         return this;
       }
 
-      // optional int32 hp = 14;
+      // optional uint32 hp = 14;
       private int hp_ ;
       /**
-       * <code>optional int32 hp = 14;</code>
+       * <code>optional uint32 hp = 14;</code>
        */
       public boolean hasHp() {
         return ((bitField0_ & 0x00002000) == 0x00002000);
       }
       /**
-       * <code>optional int32 hp = 14;</code>
+       * <code>optional uint32 hp = 14;</code>
        */
       public int getHp() {
         return hp_;
       }
       /**
-       * <code>optional int32 hp = 14;</code>
+       * <code>optional uint32 hp = 14;</code>
        */
       public Builder setHp(int value) {
         bitField0_ |= 0x00002000;
@@ -4549,7 +4638,7 @@ public final class RoleProto {
         return this;
       }
       /**
-       * <code>optional int32 hp = 14;</code>
+       * <code>optional uint32 hp = 14;</code>
        */
       public Builder clearHp() {
         bitField0_ = (bitField0_ & ~0x00002000);
@@ -4558,22 +4647,22 @@ public final class RoleProto {
         return this;
       }
 
-      // optional int32 mp = 15;
+      // optional uint32 mp = 15;
       private int mp_ ;
       /**
-       * <code>optional int32 mp = 15;</code>
+       * <code>optional uint32 mp = 15;</code>
        */
       public boolean hasMp() {
         return ((bitField0_ & 0x00004000) == 0x00004000);
       }
       /**
-       * <code>optional int32 mp = 15;</code>
+       * <code>optional uint32 mp = 15;</code>
        */
       public int getMp() {
         return mp_;
       }
       /**
-       * <code>optional int32 mp = 15;</code>
+       * <code>optional uint32 mp = 15;</code>
        */
       public Builder setMp(int value) {
         bitField0_ |= 0x00004000;
@@ -4582,7 +4671,7 @@ public final class RoleProto {
         return this;
       }
       /**
-       * <code>optional int32 mp = 15;</code>
+       * <code>optional uint32 mp = 15;</code>
        */
       public Builder clearMp() {
         bitField0_ = (bitField0_ & ~0x00004000);
@@ -4591,22 +4680,22 @@ public final class RoleProto {
         return this;
       }
 
-      // optional int32 max_hp = 16;
+      // optional uint32 max_hp = 16;
       private int maxHp_ ;
       /**
-       * <code>optional int32 max_hp = 16;</code>
+       * <code>optional uint32 max_hp = 16;</code>
        */
       public boolean hasMaxHp() {
         return ((bitField0_ & 0x00008000) == 0x00008000);
       }
       /**
-       * <code>optional int32 max_hp = 16;</code>
+       * <code>optional uint32 max_hp = 16;</code>
        */
       public int getMaxHp() {
         return maxHp_;
       }
       /**
-       * <code>optional int32 max_hp = 16;</code>
+       * <code>optional uint32 max_hp = 16;</code>
        */
       public Builder setMaxHp(int value) {
         bitField0_ |= 0x00008000;
@@ -4615,7 +4704,7 @@ public final class RoleProto {
         return this;
       }
       /**
-       * <code>optional int32 max_hp = 16;</code>
+       * <code>optional uint32 max_hp = 16;</code>
        */
       public Builder clearMaxHp() {
         bitField0_ = (bitField0_ & ~0x00008000);
@@ -4624,22 +4713,22 @@ public final class RoleProto {
         return this;
       }
 
-      // optional int32 max_mp = 17;
+      // optional uint32 max_mp = 17;
       private int maxMp_ ;
       /**
-       * <code>optional int32 max_mp = 17;</code>
+       * <code>optional uint32 max_mp = 17;</code>
        */
       public boolean hasMaxMp() {
         return ((bitField0_ & 0x00010000) == 0x00010000);
       }
       /**
-       * <code>optional int32 max_mp = 17;</code>
+       * <code>optional uint32 max_mp = 17;</code>
        */
       public int getMaxMp() {
         return maxMp_;
       }
       /**
-       * <code>optional int32 max_mp = 17;</code>
+       * <code>optional uint32 max_mp = 17;</code>
        */
       public Builder setMaxMp(int value) {
         bitField0_ |= 0x00010000;
@@ -4648,7 +4737,7 @@ public final class RoleProto {
         return this;
       }
       /**
-       * <code>optional int32 max_mp = 17;</code>
+       * <code>optional uint32 max_mp = 17;</code>
        */
       public Builder clearMaxMp() {
         bitField0_ = (bitField0_ & ~0x00010000);
@@ -6352,6 +6441,410 @@ public final class RoleProto {
     }
 
     // @@protoc_insertion_point(class_scope:protoFiles.CreateRoleReq_1001003)
+  }
+
+  public interface CreateRoleResp_1001003OrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required int32 code = 1;
+    /**
+     * <code>required int32 code = 1;</code>
+     */
+    boolean hasCode();
+    /**
+     * <code>required int32 code = 1;</code>
+     */
+    int getCode();
+  }
+  /**
+   * Protobuf type {@code protoFiles.CreateRoleResp_1001003}
+   */
+  public static final class CreateRoleResp_1001003 extends
+      com.google.protobuf.GeneratedMessage
+      implements CreateRoleResp_1001003OrBuilder {
+    // Use CreateRoleResp_1001003.newBuilder() to construct.
+    private CreateRoleResp_1001003(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CreateRoleResp_1001003(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CreateRoleResp_1001003 defaultInstance;
+    public static CreateRoleResp_1001003 getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CreateRoleResp_1001003 getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CreateRoleResp_1001003(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              code_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.RoleProto.internal_static_protoFiles_CreateRoleResp_1001003_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.RoleProto.internal_static_protoFiles_CreateRoleResp_1001003_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.RoleProto.CreateRoleResp_1001003.class, proto.RoleProto.CreateRoleResp_1001003.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CreateRoleResp_1001003> PARSER =
+        new com.google.protobuf.AbstractParser<CreateRoleResp_1001003>() {
+      public CreateRoleResp_1001003 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CreateRoleResp_1001003(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateRoleResp_1001003> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required int32 code = 1;
+    public static final int CODE_FIELD_NUMBER = 1;
+    private int code_;
+    /**
+     * <code>required int32 code = 1;</code>
+     */
+    public boolean hasCode() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 code = 1;</code>
+     */
+    public int getCode() {
+      return code_;
+    }
+
+    private void initFields() {
+      code_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasCode()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, code_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, code_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static proto.RoleProto.CreateRoleResp_1001003 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.RoleProto.CreateRoleResp_1001003 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.RoleProto.CreateRoleResp_1001003 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.RoleProto.CreateRoleResp_1001003 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.RoleProto.CreateRoleResp_1001003 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static proto.RoleProto.CreateRoleResp_1001003 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static proto.RoleProto.CreateRoleResp_1001003 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static proto.RoleProto.CreateRoleResp_1001003 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static proto.RoleProto.CreateRoleResp_1001003 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static proto.RoleProto.CreateRoleResp_1001003 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(proto.RoleProto.CreateRoleResp_1001003 prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code protoFiles.CreateRoleResp_1001003}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements proto.RoleProto.CreateRoleResp_1001003OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.RoleProto.internal_static_protoFiles_CreateRoleResp_1001003_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.RoleProto.internal_static_protoFiles_CreateRoleResp_1001003_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.RoleProto.CreateRoleResp_1001003.class, proto.RoleProto.CreateRoleResp_1001003.Builder.class);
+      }
+
+      // Construct using proto.RoleProto.CreateRoleResp_1001003.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        code_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.RoleProto.internal_static_protoFiles_CreateRoleResp_1001003_descriptor;
+      }
+
+      public proto.RoleProto.CreateRoleResp_1001003 getDefaultInstanceForType() {
+        return proto.RoleProto.CreateRoleResp_1001003.getDefaultInstance();
+      }
+
+      public proto.RoleProto.CreateRoleResp_1001003 build() {
+        proto.RoleProto.CreateRoleResp_1001003 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public proto.RoleProto.CreateRoleResp_1001003 buildPartial() {
+        proto.RoleProto.CreateRoleResp_1001003 result = new proto.RoleProto.CreateRoleResp_1001003(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.code_ = code_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.RoleProto.CreateRoleResp_1001003) {
+          return mergeFrom((proto.RoleProto.CreateRoleResp_1001003)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.RoleProto.CreateRoleResp_1001003 other) {
+        if (other == proto.RoleProto.CreateRoleResp_1001003.getDefaultInstance()) return this;
+        if (other.hasCode()) {
+          setCode(other.getCode());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasCode()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        proto.RoleProto.CreateRoleResp_1001003 parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (proto.RoleProto.CreateRoleResp_1001003) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required int32 code = 1;
+      private int code_ ;
+      /**
+       * <code>required int32 code = 1;</code>
+       */
+      public boolean hasCode() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 code = 1;</code>
+       */
+      public int getCode() {
+        return code_;
+      }
+      /**
+       * <code>required int32 code = 1;</code>
+       */
+      public Builder setCode(int value) {
+        bitField0_ |= 0x00000001;
+        code_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 code = 1;</code>
+       */
+      public Builder clearCode() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        code_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:protoFiles.CreateRoleResp_1001003)
+    }
+
+    static {
+      defaultInstance = new CreateRoleResp_1001003(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:protoFiles.CreateRoleResp_1001003)
   }
 
   public interface EnterGameReq_1001004OrBuilder
@@ -8529,6 +9022,11 @@ public final class RoleProto {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_protoFiles_CreateRoleReq_1001003_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_protoFiles_CreateRoleResp_1001003_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_protoFiles_CreateRoleResp_1001003_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
     internal_static_protoFiles_EnterGameReq_1001004_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -8559,24 +9057,25 @@ public final class RoleProto {
     java.lang.String[] descriptorData = {
       "\n\017RoleProto.proto\022\nprotoFiles\"5\n\020LoginRe" +
       "q_1001001\022\017\n\007account\030\001 \002(\t\022\020\n\010password\030\002" +
-      " \002(\t\"R\n\021LoginResp_1001001\022\017\n\007account\030\001 \002" +
+      " \002(\t\"`\n\021LoginResp_1001001\022\017\n\007account\030\001 \002" +
       "(\t\022\013\n\003rid\030\002 \001(\t\022\037\n\005roles\030\003 \003(\0132\020.protoFi" +
-      "les.Role\"-\n\004Item\022\014\n\004type\030\001 \002(\005\022\n\n\002id\030\002 \002" +
-      "(\005\022\013\n\003num\030\003 \002(\005\"\345\001\n\004Role\022\n\n\002id\030\001 \002(\005\022\014\n\004" +
-      "name\030\002 \002(\t\022\014\n\004coin\030\003 \001(\005\022\013\n\003gem\030\004 \001(\005\022\013\n" +
-      "\003exp\030\005 \001(\005\022\r\n\005scene\030\006 \001(\t\022\017\n\007area_id\030\007 \001" +
-      "(\005\022\t\n\001x\030\010 \001(\002\022\t\n\001y\030\t \001(\002\022\t\n\001z\030\n \001(\002\022\n\n\002e" +
-      "x\030\013 \001(\002\022\n\n\002ey\030\014 \001(\002\022\n\n\002ez\030\r \001(\002\022\n\n\002hp\030\016 ",
-      "\001(\005\022\n\n\002mp\030\017 \001(\005\022\016\n\006max_hp\030\020 \001(\005\022\016\n\006max_m" +
-      "p\030\021 \001(\005\"8\n\023RegisterReq_1001002\022\017\n\007accoun" +
-      "t\030\001 \002(\t\022\020\n\010password\030\002 \002(\t\"$\n\024RegisterRes" +
-      "p_1001002\022\014\n\004code\030\001 \002(\005\"%\n\025CreateRoleReq" +
-      "_1001003\022\014\n\004name\030\001 \002(\t\"\'\n\024EnterGameReq_1" +
-      "001004\022\017\n\007role_id\030\001 \002(\005\"X\n\025EnterGameResp" +
-      "_1001004\022\036\n\004role\030\001 \002(\0132\020.protoFiles.Role" +
-      "\022\037\n\005items\030\002 \003(\0132\020.protoFiles.Item\"\024\n\022Out" +
-      "GameReq_1001005\"\025\n\023OutGameResp_1001005B\022" +
-      "\n\005protoB\tRoleProto"
+      "les.Role\022\014\n\004code\030\004 \002(\005\"-\n\004Item\022\014\n\004type\030\001" +
+      " \002(\005\022\n\n\002id\030\002 \002(\005\022\013\n\003num\030\003 \002(\005\"\345\001\n\004Role\022\n" +
+      "\n\002id\030\001 \002(\r\022\014\n\004name\030\002 \002(\t\022\014\n\004coin\030\003 \001(\r\022\013" +
+      "\n\003gem\030\004 \001(\r\022\013\n\003exp\030\005 \001(\r\022\r\n\005scene\030\006 \001(\t\022" +
+      "\017\n\007area_id\030\007 \001(\005\022\t\n\001x\030\010 \001(\002\022\t\n\001y\030\t \001(\002\022\t" +
+      "\n\001z\030\n \001(\002\022\n\n\002ex\030\013 \001(\002\022\n\n\002ey\030\014 \001(\002\022\n\n\002ez\030",
+      "\r \001(\002\022\n\n\002hp\030\016 \001(\r\022\n\n\002mp\030\017 \001(\r\022\016\n\006max_hp\030" +
+      "\020 \001(\r\022\016\n\006max_mp\030\021 \001(\r\"8\n\023RegisterReq_100" +
+      "1002\022\017\n\007account\030\001 \002(\t\022\020\n\010password\030\002 \002(\t\"" +
+      "$\n\024RegisterResp_1001002\022\014\n\004code\030\001 \002(\005\"%\n" +
+      "\025CreateRoleReq_1001003\022\014\n\004name\030\001 \002(\t\"&\n\026" +
+      "CreateRoleResp_1001003\022\014\n\004code\030\001 \002(\005\"\'\n\024" +
+      "EnterGameReq_1001004\022\017\n\007role_id\030\001 \002(\005\"X\n" +
+      "\025EnterGameResp_1001004\022\036\n\004role\030\001 \002(\0132\020.p" +
+      "rotoFiles.Role\022\037\n\005items\030\002 \003(\0132\020.protoFil" +
+      "es.Item\"\024\n\022OutGameReq_1001005\"\025\n\023OutGame",
+      "Resp_1001005B\022\n\005protoB\tRoleProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -8594,7 +9093,7 @@ public final class RoleProto {
           internal_static_protoFiles_LoginResp_1001001_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_protoFiles_LoginResp_1001001_descriptor,
-              new java.lang.String[] { "Account", "Rid", "Roles", });
+              new java.lang.String[] { "Account", "Rid", "Roles", "Code", });
           internal_static_protoFiles_Item_descriptor =
             getDescriptor().getMessageTypes().get(2);
           internal_static_protoFiles_Item_fieldAccessorTable = new
@@ -8625,26 +9124,32 @@ public final class RoleProto {
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_protoFiles_CreateRoleReq_1001003_descriptor,
               new java.lang.String[] { "Name", });
-          internal_static_protoFiles_EnterGameReq_1001004_descriptor =
+          internal_static_protoFiles_CreateRoleResp_1001003_descriptor =
             getDescriptor().getMessageTypes().get(7);
+          internal_static_protoFiles_CreateRoleResp_1001003_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_protoFiles_CreateRoleResp_1001003_descriptor,
+              new java.lang.String[] { "Code", });
+          internal_static_protoFiles_EnterGameReq_1001004_descriptor =
+            getDescriptor().getMessageTypes().get(8);
           internal_static_protoFiles_EnterGameReq_1001004_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_protoFiles_EnterGameReq_1001004_descriptor,
               new java.lang.String[] { "RoleId", });
           internal_static_protoFiles_EnterGameResp_1001004_descriptor =
-            getDescriptor().getMessageTypes().get(8);
+            getDescriptor().getMessageTypes().get(9);
           internal_static_protoFiles_EnterGameResp_1001004_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_protoFiles_EnterGameResp_1001004_descriptor,
               new java.lang.String[] { "Role", "Items", });
           internal_static_protoFiles_OutGameReq_1001005_descriptor =
-            getDescriptor().getMessageTypes().get(9);
+            getDescriptor().getMessageTypes().get(10);
           internal_static_protoFiles_OutGameReq_1001005_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_protoFiles_OutGameReq_1001005_descriptor,
               new java.lang.String[] { });
           internal_static_protoFiles_OutGameResp_1001005_descriptor =
-            getDescriptor().getMessageTypes().get(10);
+            getDescriptor().getMessageTypes().get(11);
           internal_static_protoFiles_OutGameResp_1001005_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_protoFiles_OutGameResp_1001005_descriptor,

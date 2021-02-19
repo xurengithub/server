@@ -12,6 +12,7 @@ message LoginResp_1001001{
 	required string account = 1;//账号
 	optional string rid = 2;//账号id
 	repeated Role roles = 3;//角色列表
+	required int32 code = 4;
 }
 
 message Item{
@@ -21,11 +22,11 @@ message Item{
 }
 
 message Role{
-    required int32 id = 1;//id
+    required uint32 id = 1;//id
     required string name = 2;//名称
-    optional int32 coin = 3;//金币数
-    optional int32 gem = 4;//钻石
-    optional int32 exp = 5;//经验
+    optional uint32 coin = 3;//金币数
+    optional uint32 gem = 4;//钻石
+    optional uint32 exp = 5;//经验
     optional string scene = 6;//场景名称
     optional int32 area_id = 7;//区域id
     optional float x = 8;
@@ -34,10 +35,10 @@ message Role{
     optional float ex = 11;
     optional float ey = 12;
     optional float ez = 13;
-    optional int32 hp = 14;
-    optional int32 mp = 15;
-    optional int32 max_hp = 16;
-    optional int32 max_mp = 17;
+    optional uint32 hp = 14;
+    optional uint32 mp = 15;
+    optional uint32 max_hp = 16;
+    optional uint32 max_mp = 17;
 
 }
 
@@ -54,6 +55,9 @@ message RegisterResp_1001002{
 // 创建角色
 message CreateRoleReq_1001003{
     required string name = 1;//名称
+}
+message CreateRoleResp_1001003{
+    required int32 code = 1;
 }
 
 // 进入游戏

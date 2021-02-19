@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
-//import game.playerino.player.Player;
 
 @Component
 public class PlayerHandler implements AbstractHandler {

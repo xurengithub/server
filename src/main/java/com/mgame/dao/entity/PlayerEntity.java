@@ -1,12 +1,12 @@
 package com.mgame.dao.entity;
 
 public class PlayerEntity {
-    private long playerId;
+    private int playerId;
     private String userId;
     private String playerName;
-    private long coin;
-    private long gem;
-    private long exp;
+    private int coin;
+    private int gem;
+    private int exp;
     private int level;
     private String scene;
     private int areaId;
@@ -16,16 +16,16 @@ public class PlayerEntity {
     private float ex;
     private float ey;
     private float ez;
-    private long hp;
-    private long mp;
-    private long maxHp;
-    private long maxMp;
+    private int hp;
+    private int mp;
+    private int maxHp;
+    private int maxMp;
 
-    public long getPlayerId() {
+    public int getPlayerId() {
         return playerId;
     }
 
-    public void setPlayerId(long playerId) {
+    public void setPlayerId(int playerId) {
         this.playerId = playerId;
     }
 
@@ -45,27 +45,27 @@ public class PlayerEntity {
         this.playerName = playerName;
     }
 
-    public long getCoin() {
+    public int getCoin() {
         return coin;
     }
 
-    public void setCoin(long coin) {
+    public void setCoin(int coin) {
         this.coin = coin;
     }
 
-    public long getGem() {
+    public int getGem() {
         return gem;
     }
 
-    public void setGem(long gem) {
+    public void setGem(int gem) {
         this.gem = gem;
     }
 
-    public long getExp() {
+    public int getExp() {
         return exp;
     }
 
-    public void setExp(long exp) {
+    public void setExp(int exp) {
         this.exp = exp;
     }
 
@@ -141,35 +141,35 @@ public class PlayerEntity {
         this.ez = ez;
     }
 
-    public long getHp() {
+    public int getHp() {
         return hp;
     }
 
-    public void setHp(long hp) {
+    public void setHp(int hp) {
         this.hp = hp;
     }
 
-    public long getMp() {
+    public int getMp() {
         return mp;
     }
 
-    public void setMp(long mp) {
+    public void setMp(int mp) {
         this.mp = mp;
     }
 
-    public long getMaxHp() {
+    public int getMaxHp() {
         return maxHp;
     }
 
-    public void setMaxHp(long maxHp) {
+    public void setMaxHp(int maxHp) {
         this.maxHp = maxHp;
     }
 
-    public long getMaxMp() {
+    public int getMaxMp() {
         return maxMp;
     }
 
-    public void setMaxMp(long maxMp) {
+    public void setMaxMp(int maxMp) {
         this.maxMp = maxMp;
     }
 }

@@ -23,7 +23,7 @@
         <result column="max_mp" property="maxMp"/>
     </resultMap>
 
-    <insert id="insert" parameterType="com.mgame.dao.entity.PlayerEntity">
+    <insert id="insert" parameterType="com.mgame.dao.entity.PlayerEntity" useGeneratedKeys="true" keyProperty="player_id">
         insert into player_info(player_name,coin,gem,user_id,exp,level,scene,area_id,x,y,z,ex,ey,ez,hp,mp,max_hp,max_mp)
         values(#{playerName},#{coin},#{gem},#{userId},#{exp},#{level},#{scene},#{areaId},#{x},#{y},#{z},#{ex},#{ey},#{ez},#{hp},#{mp},#{maxHp},#{maxMp})
     </insert>

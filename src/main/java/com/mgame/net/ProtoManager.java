@@ -5,7 +5,6 @@ import com.mgame.handler.AbstractHandler;
 import com.mgame.handler.PlayerHandler;
 import com.mgame.handler.SynHandler;
 import com.mgame.handler.UserHandler;
-import com.mgame.service.UserService;
 import com.mgame.utils.ClassUtils;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufAllocator;
@@ -18,7 +17,6 @@ import java.util.Set;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import proto.RoleProto;
 import proto.RoleProto.LoginResp_1001001;
 
 import com.google.protobuf.Message;
