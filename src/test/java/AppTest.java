@@ -55,20 +55,20 @@ public class AppTest
             System.out.println("send:"+j);
         }
 
-        for(int j = 1; j < 2; j++) {
-            ByteBuf buf = Unpooled.buffer();
-            RoleProto.LogoutReq_1001002.Builder builder = RoleProto.LogoutReq_1001002.newBuilder();
-            builder.setRid(1008L);
-            RoleProto.LogoutReq_1001002 logoutReq_1001002 = builder.build();
-            byte[] data = logoutReq_1001002.toByteArray();
-            buf.writeByte((byte)0x80);
-            buf.writeShort(data.length + 4);
-            buf.writeInt(1001002);
-            buf.writeBytes(data);
-            embeddedChannel.writeInbound(buf);
-            embeddedChannel.flush();
-            System.out.println("send:"+j);
-        }
+//        for(int j = 1; j < 2; j++) {
+//            ByteBuf buf = Unpooled.buffer();
+//            RoleProto.LogoutReq_1001002.Builder builder = RoleProto.LogoutReq_1001002.newBuilder();
+//            builder.setRid(1008L);
+//            RoleProto.LogoutReq_1001002 logoutReq_1001002 = builder.build();
+//            byte[] data = logoutReq_1001002.toByteArray();
+//            buf.writeByte((byte)0x80);
+//            buf.writeShort(data.length + 4);
+//            buf.writeInt(1001002);
+//            buf.writeBytes(data);
+//            embeddedChannel.writeInbound(buf);
+//            embeddedChannel.flush();
+//            System.out.println("send:"+j);
+//        }
 
         try {
             Thread.sleep(Integer.MAX_VALUE);

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.mgame.dao.mapper.UserMapper">
+<mapper namespace="com.mgame.dao.mapper.PlayerMapper">
     <resultMap id ="PlayerMap" type="com.mgame.dao.entity.PlayerEntity">
         <result column="player_id" property="playerId"/>
         <result column="player_name" property="playerName"/>
@@ -65,6 +65,6 @@
     </select>
     <select id="findPlayersInfoByUserId" parameterType="java.lang.String" resultMap="PlayerMap">
         select * from player_info
-        where user_name=#{userName}
+        where user_id=#{userId}
     </select>
 </mapper>

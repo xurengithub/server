@@ -6,11 +6,13 @@ import com.mgame.handler.PlayerHandler;
 import com.mgame.handler.SynHandler;
 import com.mgame.handler.UserHandler;
 import com.mgame.utils.ClassUtils;
+import com.mgame.utils.SpringUtil;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufAllocator;
 import io.netty.channel.Channel;
 
 import java.lang.reflect.Method;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -36,6 +38,7 @@ public class ProtoManager {
         try {
             reqMap = ClassUtils.getClasses(packageName, clazz, "Req_");
             respMap = ClassUtils.getClasses(packageName, clazz, "Resp_");
+            messageType = new HashMap<>();
             messageType.put(1001000, UserHandler.class);//心跳
             messageType.put(1001001, UserHandler.class);//登陆
             messageType.put(1001002, UserHandler.class);//注册
@@ -104,7 +107,7 @@ public class ProtoManager {
                 return;
             }
 
-            AbstractHandler handler = (AbstractHandler) SpringContextHelper.getBean2(messageType.get(cmd));
+            AbstractHandler handler = (AbstractHandler) SpringUtil.getBean(messageType.get(cmd));
             handler.handle(channel, object);
 
 			ProtoPrinter.print(object);

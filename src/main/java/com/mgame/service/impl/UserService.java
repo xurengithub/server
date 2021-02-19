@@ -21,7 +21,7 @@ public class UserService implements IUserService {
     public void saveUserInfo(String account, String password) {
         UserInfoEntity userInfoEntity = new UserInfoEntity();
         userInfoEntity.setId(sid.nextShort());
-        userInfoEntity.setNickName("");
+        userInfoEntity.setNickName(account);
         userInfoEntity.setAccount(account);
         userInfoEntity.setPassword(password);
 

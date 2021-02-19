@@ -35,7 +35,7 @@ public class UserHandler implements AbstractHandler {
 
     @Override
     public void handle(Channel channel, Object message) {
-        if(message instanceof RoleProto.LoginResp_1001001) {
+        if(message instanceof RoleProto.LoginReq_1001001) {
             login(channel, (RoleProto.LoginReq_1001001)message);
         }
         if(message instanceof RoleProto.RegisterReq_1001002) {
@@ -56,10 +56,14 @@ public class UserHandler implements AbstractHandler {
         boolean isSucc = userService.verifyAccountAndPassword(account, password);
 
         RoleProto.LoginResp_1001001.Builder builder = RoleProto.LoginResp_1001001.newBuilder();
+        builder.setAccount(account);
         if(!isSucc) {
-            builder.setCode(1);
+            builder.setCode(-1);
+            ProtoManager.send(builder.build(), channel);
+            logger.info("账号密码错误,账号：{},密码:{}", account, password);
+            return;
         }
-
+        logger.info("账号密码成功,账号：{},密码:{}", account, password);
         UserInfoEntity userInfo = userService.getUserInfo(account);
         String userID = userInfo.getId();
         List<PlayerEntity> roleList = playerService.findPlayersInfoByUserId(userID);
@@ -81,7 +85,7 @@ public class UserHandler implements AbstractHandler {
             builder1.setMp(roleInfo.getMp());
             builder1.setName(roleInfo.getPlayerName());
 
-            builder.setRoles(i, builder1);
+            builder.addRoles(builder1);
         }
         builder.setCode(0);
 
@@ -97,7 +101,7 @@ public class UserHandler implements AbstractHandler {
         boolean isSucc = userService.register(account, password);
         if(!isSucc) {
             RoleProto.RegisterResp_1001002.Builder builder = RoleProto.RegisterResp_1001002.newBuilder();
-            builder.setCode(1);
+            builder.setCode(-1);
 
             ProtoManager.send(builder.build(), channel);
         }
@@ -106,7 +110,7 @@ public class UserHandler implements AbstractHandler {
     private void createPlayer(Channel channel, RoleProto.CreateRoleReq_1001003 req) {
         RoleProto.CreateRoleResp_1001003.Builder builder = RoleProto.CreateRoleResp_1001003.newBuilder();
         if(!channel.hasAttr(userKey)) {
-            builder.setCode(1);
+            builder.setCode(-1);
             ProtoManager.send(builder.build(), channel);
             return;
         }
@@ -115,7 +119,7 @@ public class UserHandler implements AbstractHandler {
         String roleName = req.getName();
         PlayerEntity roleInfo = playerService.findByName(roleName);
         if(!ObjectUtils.isEmpty(roleInfo)) {
-            builder.setCode(1);
+            builder.setCode(-1);
             ProtoManager.send(builder.build(), channel);
             return;
         }
@@ -147,9 +151,8 @@ public class UserHandler implements AbstractHandler {
         PlayerManager.addPlayer(playerEntity.getPlayerId(), player);
         //获取区域信息并添加入area
 
-        RoleProto.CreateRoleResp_1001003.Builder builder1 = RoleProto.CreateRoleResp_1001003.newBuilder();
-        builder1.setCode(0);
-        ProtoManager.send(builder1.build(), channel);
+        builder.setCode(0);
+        ProtoManager.send(builder.build(), channel);
     }
 
     private void ping(Channel channel, SyncProto.PingReq_1001000 req) {

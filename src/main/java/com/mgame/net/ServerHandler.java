@@ -29,7 +29,6 @@ public class ServerHandler extends ChannelInboundHandlerAdapter{
         super.channelActive(ctx);
 
         log.info("[{}] connected", ctx.channel().remoteAddress());
-        System.out.println("----channel:"+ctx.channel());
         ref.put(ctx.channel(), ctx.channel());
     }
 
