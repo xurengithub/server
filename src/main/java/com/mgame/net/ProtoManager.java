@@ -1,6 +1,5 @@
 package com.mgame.net;
 
-import com.mgame.SpringContextHelper;
 import com.mgame.handler.AbstractHandler;
 import com.mgame.handler.PlayerHandler;
 import com.mgame.handler.SynHandler;

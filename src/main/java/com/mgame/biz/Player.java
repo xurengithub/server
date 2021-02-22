@@ -12,13 +12,9 @@ import java.util.List;
 public class Player {
 
     public int playerId;
-    public String scene;
-    public int areaId;
-    public Area area;
     public Channel channel;
 
     public PlayerEntity playerEntity;
-    public List<ItemEntity> itemEntityList;
     public Player(Channel channel){
         this.channel = channel;
     }
@@ -27,22 +23,20 @@ public class Player {
         ProtoManager.send(msg, channel);
     }
 
+    public boolean isValid() {
+        if(playerId == 0) {
+            return false;
+        }
+        return true;
+    }
+
     public void update(){
     }
 
     public void close(){
-
-        area.removePlayer(playerId);
-
         PlayerManager.removePlayer(playerId);
         playerId = 0;
-        scene = null;
-        areaId = 0;
-        area = null;
         channel = null;
-
         playerEntity = null;
-        itemEntityList = null;
-
     }
 }

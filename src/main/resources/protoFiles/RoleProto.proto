@@ -67,6 +67,7 @@ message EnterGameReq_1001004{
 message EnterGameResp_1001004{
     required Role role = 1;//角色信息
     repeated Item items = 2;//拥有物品
+    required int32 Code = 3;
 }
 
 //离线广播

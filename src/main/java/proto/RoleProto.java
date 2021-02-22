@@ -7364,6 +7364,16 @@ public final class RoleProto {
      */
     proto.RoleProto.ItemOrBuilder getItemsOrBuilder(
         int index);
+
+    // required int32 Code = 3;
+    /**
+     * <code>required int32 Code = 3;</code>
+     */
+    boolean hasCode();
+    /**
+     * <code>required int32 Code = 3;</code>
+     */
+    int getCode();
   }
   /**
    * Protobuf type {@code protoFiles.EnterGameResp_1001004}
@@ -7435,6 +7445,11 @@ public final class RoleProto {
                 mutable_bitField0_ |= 0x00000002;
               }
               items_.add(input.readMessage(proto.RoleProto.Item.PARSER, extensionRegistry));
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000002;
+              code_ = input.readInt32();
               break;
             }
           }
@@ -7570,9 +7585,26 @@ public final class RoleProto {
       return items_.get(index);
     }
 
+    // required int32 Code = 3;
+    public static final int CODE_FIELD_NUMBER = 3;
+    private int code_;
+    /**
+     * <code>required int32 Code = 3;</code>
+     */
+    public boolean hasCode() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int32 Code = 3;</code>
+     */
+    public int getCode() {
+      return code_;
+    }
+
     private void initFields() {
       role_ = proto.RoleProto.Role.getDefaultInstance();
       items_ = java.util.Collections.emptyList();
+      code_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -7580,6 +7612,10 @@ public final class RoleProto {
       if (isInitialized != -1) return isInitialized == 1;
 
       if (!hasRole()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasCode()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -7606,6 +7642,9 @@ public final class RoleProto {
       for (int i = 0; i < items_.size(); i++) {
         output.writeMessage(2, items_.get(i));
       }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(3, code_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -7622,6 +7661,10 @@ public final class RoleProto {
       for (int i = 0; i < items_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, items_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, code_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -7753,6 +7796,8 @@ public final class RoleProto {
         } else {
           itemsBuilder_.clear();
         }
+        code_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -7798,6 +7843,10 @@ public final class RoleProto {
         } else {
           result.items_ = itemsBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.code_ = code_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -7843,12 +7892,19 @@ public final class RoleProto {
             }
           }
         }
+        if (other.hasCode()) {
+          setCode(other.getCode());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
         if (!hasRole()) {
+          
+          return false;
+        }
+        if (!hasCode()) {
           
           return false;
         }
@@ -8349,6 +8405,39 @@ public final class RoleProto {
         return itemsBuilder_;
       }
 
+      // required int32 Code = 3;
+      private int code_ ;
+      /**
+       * <code>required int32 Code = 3;</code>
+       */
+      public boolean hasCode() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required int32 Code = 3;</code>
+       */
+      public int getCode() {
+        return code_;
+      }
+      /**
+       * <code>required int32 Code = 3;</code>
+       */
+      public Builder setCode(int value) {
+        bitField0_ |= 0x00000004;
+        code_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 Code = 3;</code>
+       */
+      public Builder clearCode() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        code_ = 0;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:protoFiles.EnterGameResp_1001004)
     }
 
@@ -8844,11 +8933,12 @@ public final class RoleProto {
       "$\n\024RegisterResp_1001002\022\014\n\004code\030\001 \002(\005\"%\n" +
       "\025CreateRoleReq_1001003\022\014\n\004name\030\001 \002(\t\"&\n\026" +
       "CreateRoleResp_1001003\022\014\n\004code\030\001 \002(\005\"\'\n\024" +
-      "EnterGameReq_1001004\022\017\n\007role_id\030\001 \002(\005\"X\n" +
+      "EnterGameReq_1001004\022\017\n\007role_id\030\001 \002(\005\"f\n" +
       "\025EnterGameResp_1001004\022\036\n\004role\030\001 \002(\0132\020.p" +
       "rotoFiles.Role\022\037\n\005items\030\002 \003(\0132\020.protoFil" +
-      "es.Item\"\'\n\022OutGameReq_1001005\022\021\n\tplayer_",
-      "id\030\001 \001(\005B\022\n\005protoB\tRoleProto"
+      "es.Item\022\014\n\004Code\030\003 \002(\005\"\'\n\022OutGameReq_1001",
+      "005\022\021\n\tplayer_id\030\001 \001(\005B\022\n\005protoB\tRolePro" +
+      "to"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -8914,7 +9004,7 @@ public final class RoleProto {
           internal_static_protoFiles_EnterGameResp_1001004_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_protoFiles_EnterGameResp_1001004_descriptor,
-              new java.lang.String[] { "Role", "Items", });
+              new java.lang.String[] { "Role", "Items", "Code", });
           internal_static_protoFiles_OutGameReq_1001005_descriptor =
             getDescriptor().getMessageTypes().get(10);
           internal_static_protoFiles_OutGameReq_1001005_fieldAccessorTable = new

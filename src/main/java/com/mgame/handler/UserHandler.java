@@ -8,6 +8,7 @@ import com.mgame.dao.entity.UserInfoEntity;
 import com.mgame.net.ProtoManager;
 import com.mgame.service.IPlayerService;
 import com.mgame.service.IUserService;
+import com.mgame.utils.ProtoCode;
 import io.netty.channel.Channel;
 import io.netty.util.AttributeKey;
 import org.slf4j.Logger;
@@ -58,12 +59,12 @@ public class UserHandler implements AbstractHandler {
         RoleProto.LoginResp_1001001.Builder builder = RoleProto.LoginResp_1001001.newBuilder();
         builder.setAccount(account);
         if(!isSucc) {
-            builder.setCode(-1);
+            builder.setCode(ProtoCode.ACOUNT_PASSWORD_ERROR);
             ProtoManager.send(builder.build(), channel);
-            logger.info("账号密码错误,账号：{},密码:{}", account, password);
+            logger.info("登陆失败,账号：{},密码:{}", account, password);
             return;
         }
-        logger.info("账号密码成功,账号：{},密码:{}", account, password);
+        logger.info("登陆成功,账号：{},密码:{}", account, password);
         UserInfoEntity userInfo = userService.getUserInfo(account);
         String userID = userInfo.getId();
         List<PlayerEntity> roleList = playerService.findPlayersInfoByUserId(userID);
@@ -87,7 +88,7 @@ public class UserHandler implements AbstractHandler {
 
             builder.addRoles(builder1);
         }
-        builder.setCode(0);
+        builder.setCode(ProtoCode.SUCC);
 
         channel.attr(userKey).set(userID);
         ProtoManager.send(builder.build(), channel);
@@ -99,18 +100,19 @@ public class UserHandler implements AbstractHandler {
         String password = req.getPassword();
 
         boolean isSucc = userService.register(account, password);
+        RoleProto.RegisterResp_1001002.Builder builder = RoleProto.RegisterResp_1001002.newBuilder();
         if(!isSucc) {
-            RoleProto.RegisterResp_1001002.Builder builder = RoleProto.RegisterResp_1001002.newBuilder();
-            builder.setCode(-1);
-
-            ProtoManager.send(builder.build(), channel);
+            builder.setCode(ProtoCode.REGIST_FAIL);
         }
+        logger.info("注册密码{},账号：{},密码:{}", isSucc ? "成功" : "失败" ,account, password);
+        builder.setCode(ProtoCode.SUCC);
+        ProtoManager.send(builder.build(), channel);
     }
 
     private void createPlayer(Channel channel, RoleProto.CreateRoleReq_1001003 req) {
         RoleProto.CreateRoleResp_1001003.Builder builder = RoleProto.CreateRoleResp_1001003.newBuilder();
         if(!channel.hasAttr(userKey)) {
-            builder.setCode(-1);
+            builder.setCode(ProtoCode.UN_LOGIN);
             ProtoManager.send(builder.build(), channel);
             return;
         }
@@ -119,7 +121,7 @@ public class UserHandler implements AbstractHandler {
         String roleName = req.getName();
         PlayerEntity roleInfo = playerService.findByName(roleName);
         if(!ObjectUtils.isEmpty(roleInfo)) {
-            builder.setCode(-1);
+            builder.setCode(ProtoCode.ROLE_NOT_EXISTS);
             ProtoManager.send(builder.build(), channel);
             return;
         }
@@ -145,13 +147,11 @@ public class UserHandler implements AbstractHandler {
         Player player = new Player(channel);
         player.playerId = playerEntity.getPlayerId();
         player.playerEntity = playerEntity;
-        player.areaId = playerEntity.getAreaId();
-        player.scene = playerEntity.getScene();
 
         PlayerManager.addPlayer(playerEntity.getPlayerId(), player);
         //获取区域信息并添加入area
 
-        builder.setCode(0);
+        builder.setCode(ProtoCode.SUCC);
         ProtoManager.send(builder.build(), channel);
     }
 

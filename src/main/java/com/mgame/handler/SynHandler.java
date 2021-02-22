@@ -24,12 +24,12 @@ public class SynHandler implements AbstractHandler{
 
         Player player = channel.attr(UserHandler.roleKey).get();
 
-        player.playerEntity.setX(req.getX());
-        player.playerEntity.setY(req.getY());
-        player.playerEntity.setZ(req.getZ());
-        player.playerEntity.setEx(req.getEx());
-        player.playerEntity.setEy(req.getEy());
-        player.playerEntity.setEz(req.getEz());
+//        player.playerEntity.setX(req.getX());
+//        player.playerEntity.setY(req.getY());
+//        player.playerEntity.setZ(req.getZ());
+//        player.playerEntity.setEx(req.getEx());
+//        player.playerEntity.setEy(req.getEy());
+//        player.playerEntity.setEz(req.getEz());
 //        req.setPlayerId(player.playerId);
         PlayerManager.send(req);
     }

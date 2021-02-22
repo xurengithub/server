@@ -1,6 +1,7 @@
 package com.mgame.biz;
 
 import com.google.protobuf.Message;
+import org.omg.CORBA.PUBLIC_MEMBER;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -22,6 +23,10 @@ public class PlayerManager {
 
     public static void addPlayer(int playerId, Player player){
         players.put(playerId,player);
+    }
+
+    public static void addPlayer(Player player) {
+
     }
 
     public static void removePlayer(long playerId){
