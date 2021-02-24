@@ -54,7 +54,6 @@ public class Area {
         if(playerIds.containsKey(playerId)){
             return false;
         }
-        player.area = this;
         playerIds.put(playerId, true);
 
 //        MsgSyncPlayer syncPlayer = new MsgSyncPlayer();
@@ -80,7 +79,6 @@ public class Area {
             return false;
         }
         playerIds.remove(playerId);
-        player.area = null;
         return true;
     }
 
