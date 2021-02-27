@@ -28,3 +28,65 @@ message AttackReq_1001007{
 }
 message AttackResp_1001007{
 }
+
+// 客户端发给服务器
+message BattleCmdReq_1001008{
+    required uint32 player_id = 1; // 角色ID
+    required uint32 start_frame = 2; // 操作起始帧
+    repeated BattleUserCmd cmd_list = 3; // 操作序列
+    required uint32 player_receive_frame = 4; // 玩家收到的最新包
+    required uint32 pack_id = 5; // 数据包ID
+}
+// 每帧广播给所有游戏角色
+message BattleCmdResp_1001008{
+    required uint32 server_frame = 1; // 当前服务器帧
+    required uint32 start_frame = 2; // 通知超时的起始帧
+    repeated BattleUserCmdPack cmdpack_list = 3;// 操作组合序列
+    required uint32 recv_player_frame = 4;// 服务器已经收到玩家多少帧了
+    required uint32 pack_id = 5;// 数据包ID 0表示空
+    reuqired uint32 pack_time_offset = 6;// 数据发出时间-收到时间 ms
+}
+message BattleUserCmdPack {
+    required uint32 player_id = 1;
+    repeated uint32 cmd_list = 2;
+}
+// 创建房间
+message CreateRoomReq_1001009{
+    required uint32 player_id = 1;
+}
+// 通知所有客户端有一个新房间创建了
+message CreateRoomResp_1001009{
+    required uint32 player_id = 1;
+    required uint32 room_id = 2;
+}
+// 客户端加入房间
+message EnterRoomReq_1001010{
+    required uint32 player_id = 1;
+    required uint32 room_id = 2;
+}
+// 通知房间内玩家有新玩家加入了
+message EnterRoomResp_1001010{
+    required uint32 player_id = 1;
+    required int32 code = 2;
+}
+// 通知所有客户端这个房间状态发生变化
+message RoomStatusChangedResp_1001011{
+    required uint32 room_id = 1;
+    required uint32 player_num = 2;
+    required uint32 status = 3;
+}
+
+message StartGameReq_1001012{
+    required uint32 room_id = 1;
+    required uint32 player_id = 2;
+}
+
+message StartGameResp_1001012{
+    required uint32 room_id = 1;
+    required uint32 seed = 2;
+}
+
+// 资源准备就绪
+message ReadyReq_1001013{
+    required uint32 player_id = 1;
+}
